@@ -1,0 +1,94 @@
+/*메인 상단*/
+img{vertical-align: middle;}
+.main_top:after {content: ""; display: block; clear: both;}
+
+.main_top>div, .main_center>div{float: left;}
+.main_top>div {padding-top: 15px;}
+.main_center>div{margin-top: 10px;}
+.top_left .cam_div{ margin: 20px 0;}
+.top_center { margin:0px 29px;}
+.top_right, .center_right {width: 293px;}
+.rolling_div {width: 493px; height: 318px;}
+.roll_content{ padding-top: 20px;}
+.rolling_text {position: relative; margin-top: 2px;}
+.rolling_text>img {position: absolute; top: 10px ; left: 0px;}
+.rolling_text>ul{padding: 0px 0 5px 170px;}
+.rolling_text>ul li{font-size: 13px; padding: 5px 0;}
+.rolling_text>ul li a{letter-spacing: -1px;}
+.rolling_text>ul li>img,.rolling_text>ul li>img+a{display: inline-block;}
+.rolling_text>ul li>img {margin-right: 3px;}
+.rolling_imgs {margin: 20px 0 18px;}
+.rolling_imgs ul:after,ul.online_main:after {content: ""; display: block; clear: both;}
+.rolling_imgs ul li, ul.online_main li  {float: left; margin: 0 5px;}
+.rolling_imgs ul li:first-child, ul.online_main li:first-child {margin-left: 0;}
+hr.line {border-bottom: 0px; text-align: center; margin-left: 0;}
+.online_div {margin: 10px 0 15px;}
+.online_title { position: relative; margin: 20px 0 5px;}
+.online_title .plus{ position: absolute; right: 10px; top: 1px;}
+.login_wrap {background-color: #F2F2F2; border: 1px solid #DDDDDD; padding: 10px 13px;}
+.login_box div {float: left; width: 177px;}
+.login_box div input{ width: 155px; height: 33px; margin: 0; border: 1px solid #ddd; padding:1px 10px;}
+.login_box div input:last-child{border-top: 0;}
+.login_box a {float: left;}
+.login_etc_btn {text-align: center; margin: 7px 0;}
+.login_etc_btn a{float: left;}
+.login_quick {text-align: center;}
+.login_after_wrap .login_etc_btn a{ display: inline-block; padding: 5px 39px; text-align: center; background-color: #FFF; color: #000; font-size: 12px;}
+.login_after_wrap .login_etc_btn a:last-child{margin-left: 10px;}
+.login_after_wrap>div>p {padding: 5px 0 6px;font-size: 13px; font-weight: bold; color: #888;}
+.login_after_wrap>div>p>font {font-size: 14px; color: #000; margin-right: 5px;}
+.login_ul { border-bottom: 1px solid #d8d8d8; border-top: 1px solid #d8d8d8; padding: 5px;}
+.login_ul li {float: left; width: 40%; padding: 3px 2px; position: relative;}
+.login_ul li:nth-child(1),.login_after_wrap .login_ul li:nth-child(2){padding-bottom:4px;}
+.login_ul li:nth-child(1),.login_after_wrap .login_ul li:nth-child(3){ width: 53%; background: url(../img/mypage/bar_quick.png) 90% 40% no-repeat;}
+.login_ul li a{color: #1b7593; margin-left: 5px; position: absolute; left: 80px;top: 3px;}
+.login_ul li a:hover{text-decoration: underline;}
+.new_main_wrap {border: 1px solid #ECECEC; margin: 6px 0 8px !important; box-sizing: border-box;}
+.new_main_wrap h3{margin: 0;padding: 5px 10px; display: block; position: relative; background-color: #fbfbfb;border-bottom: 1px solid #ECECEC;}
+.pro_page  {padding: 3px 5px;}
+.pro_page a,.pro_page>span{float: right; padding: 3px 0;}
+.pro_page a {height: 22px;background: none;}
+.pro_page>span{margin-right: 15px; padding: 9px 0;}
+.new_pros {width: 100%; padding: 24px 0px;}
+.new_pros li {float: left; width: 50%; padding-top: 20px; text-align:center; padding-left: 7px;}
+.new_pros li:nth-child(2n) {text-align: left;width: 45%;padding-left: 4px;}
+.new_pros li img{border: 1px solid #ececec; padding: 0 15px; box-sizing: border-box; height: 100px}
+
+.new_cates li {float: left; margin: 5px 4px;}
+.new_cates { border-bottom: 1px solid #ececec;}
+.new_cates li a {display: inline-block; padding: 5px 0;}
+.new_content {position: relative; padding-top: 10px;}
+.new_content .plus {position: absolute; right: 8px; top: 34px;}
+.center_mid {margin:0 14px; width: 609px;}
+.center_mid>div{float: left; width: 50%;}
+.center_mid ul li{width: 100%;text-align: center;}
+.center_mid ul li a {border: 1px solid #ddd; margin: 10px; padding: 41px;}
+.center_mid ul li:first-child a{margin-top: 0px;}
+.center_mid ul li:last-child a{margin-bottom: 0px;}
+/* .main_center>div.center_right {margin-top: 0px;} */
+.recom_main {border: 1px solid #ECECEC; box-sizing: border-box;}
+.recom_main .pro_page{background-color: #fbfbfb;border-bottom: 1px solid #ECECEC; padding: 5px 10px;}
+.pro_page>img{ padding: 5px 0;}
+.recom_content {padding: 15px;width: 303px;}
+.health_info_wrap {width: 270px;}
+.health_info_title{position: relative; border: 1px solid #ECECEC;}
+.health_info_title .plus {font-size: 30px; position: absolute; top: 0px; right: 10px; line-height: 37px;}
+.health_info_title h3 {background-color: #FBFBFD; margin: 0; padding: 10px;border-bottom: 1px solid #ECECEC; }
+.health_info_content {padding:3px 7px 11px;}
+.health_info_content ul li {float: left; width: 30%; padding: 6px 0; }
+ .health_info_content ul li:nth-child(3n+2){width: 40%;}
+.health_info_content ul li a{padding: 5px 0; padding-left:8px; font-size: 11px;  height: 15px; background: url("../img/main/arr_right_b.png") 0% 40% no-repeat;}
+.health_info_content>a>span {text-align:center; font-weight:bold; display: block; padding: 10px 0; margin: 0 5px;  border: 1px solid #ececec;}
+/*슬라이드*/
+.roll_titles span.swiper-pagination-bullet{width: 100px ; height: 20px; text-align: center; line-height: 20px; font-size: 14px; font-weight: bold; color:#000;background: none; opacity: 1; letter-spacing: -1px;}
+.roll_titles span.swiper-pagination-bullet-active { color:#007aff; font-size: 15px;}
+.swiper-container-horizontal>.roll_titles.swiper-pagination-bullets {top: 0px; left: 0;text-align: left; height: 20px; margin-left: -6px;}
+.pro_page .swiper-button-next,.pro_page .swiper-button-prev {position: absolute; top: 27px; width: 27px; height: 22px; z-index: 10;opacity: 1 !important;}
+.pro_page .swiper-button-prev {left: 234px;}
+.pro_page .swiper-pagination{top: 2px; bottom: auto;z-index: 1;text-align: right;padding-left: 115px; width: 100px;}
+.recom_content .swiper-slide a+a {padding-top: 4px;}
+
+.new_cates span.swiper-pagination-bullet{width: auto;height: 20px; text-align: center; line-height: 20px; font-size: 12px; font-weight: bold; color:#000;background: none; opacity: 1; letter-spacing: -1px; margin: 5px 4px!important;}
+.new_cates span.swiper-pagination-bullet:last-child{margin-right: 0 !important;}
+.new_cates span.swiper-pagination-bullet-active { color:red;}
+.swiper-container-horizontal>.new_cates.swiper-pagination-bullets {top: 30px; left: 0;text-align: center; height: 30px;}

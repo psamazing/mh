@@ -1,0 +1,34 @@
+@charset "euc-kr";
+@import url("../css/common.css");
+
+.footer-wrap{clear:both;width:100%;height:240px;border-top:1px solid #e4e4e4; font-family:Nanum Gothic, sans-serif;}
+.footer{border-bottom:1px solid #e4e4e4; height:40px;}
+.section{background:#f6f6f6;}
+.section .about_list_wrap{width:1200px;height:40px;margin:0 auto;letter-spacing:0.3px}
+.section .about_list_wrap ul{position:absolute;top:0;right:0;}
+.section .about_list_wrap li.on{color:#e30000;height:40px;line-height:40px;width:145px; text-align:center;}
+.section .about_list_wrap li{width:140px; float:left;text-align:center;line-height:41px;font-size:13px;font-family:Malgun Gothic;}
+.section .about_list_wrap li a:hover{text-decoration:underline;}
+.section .about_list_wrap li:nth-child(1) a{width:150px; border-right:1px solid #d7d7d7; padding-right:32px;}
+.section .about_list_wrap li:nth-child(2) a{border-right:1px solid #d7d7d7; padding-right:33px;}
+.section .about_list_wrap li:nth-child(3) a{border-right:1px solid #d7d7d7; padding-right:25px;}
+.section .about_list_wrap li:nth-child(4) a{border-right:1px solid #d7d7d7; padding-right:29px;}
+.section .about_list_wrap li:nth-child(5) a{border-right:1px solid #d7d7d7; padding-right:39px;margin-left:-40px}
+.section .about_list_wrap li:nth-child(6) a{margin-left:-120px}
+.section1{width:1200px;margin:30px auto 0px;}
+.section1 .intro_list_wrap li{width:256px; float:left;}
+.section1 .intro_list_wrap h2{font-size:1.3rem;margin-bottom:10px;color:#777;font-family:'Malgun Gothic';}
+.section1 .intro_list_wrap p{color:#888}
+.section1 .intro_list_wrap h3{font-size:1.4rem;margin-bottom:12px;color:#666;font-family:'NotoSansMedium'}
+.section1 .intro_list_wrap .company_info{width:380px; margin-left: 10px;}
+.section1 .intro_list_wrap .company_info p{font-size:9pt;}
+.section1 .intro_list_wrap .copyright{margin-top:6px;font-size:1.2rem;}
+.section1 .intro_list_wrap .copyright img{vertical-align:middle}
+.section1 .footer-logo{height:75px;background:url(../img/main/imedic_footer_logo.png) no-repeat 0% 0%}
+.section1 .footinfo2{text-align:right; margin-right:20px;}
+.section1 .intro_list_wrap li{line-height: 20px;color:#333;font-size:2.8rem;font-family:'Malgun Gothic';}
+.section1 .intro_list_wrap li span{display:block;margin-top:6px;margin-left:2px;font-size:1.2rem;color:#888}
+.section1 .intro_list_wrap .cs_center{width:158px;}
+.section1 .intro_list_wrap .credit_info{width:212px;}
+.goTop {display: none;position:fixed;    bottom: 0px;right: 0px;opacity: 0.8;cursor: pointer;z-index: 999999;}
+.goTop:hover{opacity: 1;}

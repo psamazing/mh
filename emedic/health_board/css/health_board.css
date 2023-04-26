@@ -1,0 +1,632 @@
+@charset 'utf-8';
+@import url(normalize.css);
+/* 본문스타일 */
+html {font-size: 10px;height:100%;}
+body{height:100%;font-size:1.3rem;font-family: 'NanumBarunGothic';line-height:1;letter-spacing:-0.5px;color:#666;background-color:#fff;}
+h1{font-size: 2rem;}
+h2{font-size: 1.8rem;}
+h3{font-size: 1.7rem;}
+p{line-height : 1.5 ; }
+button{border:0;padding:0;}
+input{height:34px;padding:8px;background-color:#fff;border:1px solid #cfcfcf;color:#777;vertical-align:middle}
+textarea{padding:8px;background-color:#fff;border:1px solid #cfcfcf;color:#777;vertical-align:middle}
+button, input,textarea, div, span, table, tr, td, ul, ol, li, dl, dt, dd{box-sizing:border-box}
+::placeholder {color:#777;opacity: 1; /* Firefox */}
+:-ms-input-placeholder {color: #777 !important;}
+::-ms-input-placeholder {color: #777;}
+.txt-blue{color:#035fb6}
+.txt-orange{color:#f6911b}
+.txt-white{color:#fff}
+.txt-b{font-family: 'NanumBarunGothicBold';}
+
+
+/* 레이아웃 ///////////////////////////////////////////////////////////////////////////////////// */
+.wrapper{position:relative;width:100%;}
+
+#infowrap{width:100%;height:34px; position:fixed; top:0px; left:0px; z-index:1000; background-color:#fff; border-bottom: 1px solid #e4e4e4;}
+.healthinfo {width:1200px; margin: 0 auto;font-family: 'NotoSansRegular';}
+.health-header{height:34px; position:relative;}
+.health-header .info1{overflow:hidden; float:left;line-height:34px;}
+.health-header .info1>li{float:left;}
+.health-header .info1>li:nth-child(2){margin-left:14px;line-height:34px;}
+.health-header .info1>li:nth-child(3){margin-left:14px;line-height:34px;}
+.health-header .info1 > li:nth-child(3) > a{display:inline-block;margin-right: 3px;}
+.healthinfo .memoInfo{display:none;position:absolute; height:22px; color:#fff; background:#27414E; border-radius:3px; margin-left:187px;top:32px;line-height:22px;width:130px;text-align:center;}
+.message{display:inline-block; height:20px; line-height:15px; margin-left:4px;color:#f6911b; font-size:1.4rem; margin-top:2px; vertical-align:middle;}
+.message_count{display:inline-block; height:20px; line-height:16px; vertical-align:middle;margin-left:5px;font-size:1.4rem;}
+.message2{display:inline-block; height:20px; line-height:14px;margin-left:4px; color:#666; font-size:1.4rem; margin-top:2px; vertical-align:middle; }
+.header_icon{vertical-align:middle;margin-top:-2px;}
+.msg-count-img{vertical-align:middle;margin-top:-3px;}
+
+.health-header .info2{float:right; margin:10px 0px 0px 0px;position:relative;}
+.health-header .info2>li{float:left; border-right: 1px solid #c9c9c9; padding: 0px 15px; font-size: 1.35rem;}
+.health-header .info2>li:last-child{border-right:none;}
+.health-header .info2>li a:hover{color:#F6911B;}
+
+.health-header .info2 li.h_mypage{width:102px; float:left; height:14px;line-height: 13px;text-align:center; padding:0px 0px;}
+.h_mypage a.mypage{display:block;height:25px;position:relative; background:url(../img/main/header_a_bottom.png) no-repeat 91px 2px; background-size:10px; margin-left:-13px;}
+.h_mypage:hover ul.mypage_over{display:block;}
+.mypage_over{display:none;position:absolute;z-index:999999;padding:5px 5px 0px 5px;top:-6px;right:83px;width:103px; height:122px;overflow:hidden;border:1px solid #c9c9c9;background:#fff;}
+.mypage_title{margin:-1px 0px 0px -13px; height:23px; line-height:15px; background:url(../img/main/header_a_top.png) no-repeat 86px 2px; background-size:10px;font-size:1.35rem;}
+.mypage_over_list.orderlist{border-top:1px solid #c9c9c9;}
+.mypage_over_list.orderlist a{margin-left:-14px;}
+.mypage_over_list.whishlist a{margin-left:-24px;}
+.mypage_over_list.myconsul a{margin-left:-24px;}
+.mypage_over_list.myedit a{margin-left:-22px;}
+.mypage_over_list{height:23px; line-height:25px; font-size:1.3rem;}
+.health-header .info2 ul.mypage_over>li.mypage_title a:hover{text-decoration:none; color:#f6911b;}
+.health-header .info2 ul.mypage_over>li a:hover{text-decoration:underline;color:#035FB6}
+
+.health-header .info2 li.h_cs{width:83px; padding:0px 0px;text-align: center;}
+.health-header .info2 li.h_cs > a.csmain{display:block;height:25px;position:relative; background:url(../img/main/header_a_bottom.png) no-repeat 71px 2px; background-size:10px; margin-left:-3px;}
+.health-header .info2 li.h_cs:hover ul.cs_over{display:block;}
+ul.cs_over{display:none;position:absolute;z-index:999999;padding:5px 6px 0px 6px;border:1px solid #c9c9c9; top:-6px;right:-19px;width:103px;height:122px;overflow:hidden; background:#fff;}
+ul.cs_over .cs_title{width:90px; height:23px; line-height:15px; padding-top:4px; margin-left:-11px;margin-top:-1px; font-size: 1.35rem; background:url(../img/main/header_a_top.png) no-repeat 73px 3px; background-size:10px;}
+ul.cs_over .cs_faq{border-top:1px solid #c9c9c9;margin-left:-2px;font-size:13px;height:26px; line-height:25px;}
+ul.cs_over .cs_faq a{margin-left:-41px;}
+ul.cs_over .cs_guide{height:24px; line-height:19px; tex-align:left; font-size:13px; border-bottom:1px solid #c9c9c9;}
+ul.cs_over .cs_guide a{margin-left:-13px;}
+ul.cs_over .customer_number{text-align:left;  margin:4px 0px 0px 9px; height:32px; line-height:18px;}
+ul.cs_over .customer_number .call_number{font-size:16px;}
+.health-header .info2 ul.cs_over>li{width:90px;font-size:1.1erm; padding:0px; border-right:none;}
+.health-header .info2 ul.cs_over>li a:hover{text-decoration:underline;color:#035FB6}
+.health-header .info2 ul.cs_over>li.cs_title a:hover{text-decoration:none; color:#f6911b;}
+
+/* 헤더 */
+.header-wrap{position:relative;width:1200px;height:110px;margin:0 auto;}
+.header-wrap h1{display:inline-block;width:230px;height:93px;background:url(../images/logo.png) no-repeat 0 28px;overflow:hidden;text-indent:100%;white-space:nowrap;}
+.header-wrap .sub-h1{padding-top:60px;font-size:3.6rem;font-family: 'NanumBarunGothicBold';color:#f6911b;}
+.header-wrap .sub-h1 span{padding-left:10px;font-size:2.4rem;font-family: 'NanumBarunGothic';color:#999;vertical-align:middle}
+.header-wrap .sub-h1-online{padding-top:38px;font-size:3.6rem;font-family: 'NanumBarunGothicBold';color:#078B76;}
+.header-wrap .sub-h1-online span{padding-left:10px;font-size:2.4rem;font-family: 'NanumBarunGothic';color:#999;vertical-align:middle}
+.header-wrap .gtm{position:absolute;top:20px;right:5px;}
+.header-wrap .gtm a{margin:0 8px;}
+.header-wrap .gtm a:hover{text-decoration:underline ;}
+.header-wrap .search-box{position:absolute;top:46px;right:0;width:499px;height:34px;padding-left:12px;background:url(../images/search_bg.png) no-repeat;}
+.header-wrap .search-box input{width:450px;height:28px;margin-top:2px;padding:6px 10px;background:#f2f5f7;border:none;color:#035fb6;line-height:1.4;font-family: 'NanumBarunGothicBold'}
+.header-wrap .search-box a{display:inline-block;width:28px;height:28px;background:url(../images/icon_search.png) no-repeat 50% 50%;overflow:hidden;text-indent:100%;white-space:nowrap;vertical-align:middle}
+.header-wrap .search-box input::placeholder {color:#035fb6;opacity: 1; /* Firefox */}
+.header-wrap .search-box input:-ms-input-placeholder {color: #035fb6 !important;}
+.header-wrap .search-box input::-ms-input-placeholder {color: #035fb6;}
+.header-wrap .bgm-box{position:absolute;top:28px;right:0;display:block;width:767px;height:42px;}
+
+/* GNB */
+.nav-wrap{position:relative;width:100%;background:#035fb6}
+.nav{position:relative;width:1200px;height:60px;margin:0 auto;background-color:#035fb6;color:#fff;}
+.nav-wrap-study{position:relative;width:100%;background:#f6911b}
+.nav-wrap-study.online{background-color:#078B76;}
+.nav-study{position:relative;width:1200px;height:45px;margin:0 auto;background-color:#f6911b;color:#fff;}
+.nav-bg{position:absolute;top:0;right:0;width:50%;height:45px;background:#035fb6;}
+.btn-category{position:absolute;top:14px;left:30px;display:inline-block;width:110px;height:32px;padding-left:35px;background:url(../images/icon_category.png) no-repeat 0 50%;line-height:2.4;font-size:1.4rem;}
+.btn-sorting{position:absolute;top:14px;left:162px;display:inline-block;width:110px;height:32px;padding-left:35px;background:url(../images/icon_ga.png) no-repeat 0 50%;line-height:2.4;font-size:1.4rem;}
+.nav-menu{position:absolute;top:0;left:330px;width:570px;height:60px;}
+.nav-menu li{float:left;height:60px;margin-left:4px;margin-right:32px;line-height:4;font-size:1.6rem;font-family: 'NanumBarunGothicBold'}
+.nav-menu li a:hover{color:#f6911b}
+
+.sub-nav-menu {position:absolute;left:0;top:0;width:900px;}
+.sub-nav-menu ul {height:45px;}
+.sub-nav-menu ul li {display:inline-block; text-align:center; width:145px;height:45px;line-height:45px;font-size:1.6rem;font-family: 'NanumBarunGothicBold'}
+.sub-nav-menu ul li a {display: block;width:145px;height:45px;}
+.sub-nav-menu ul li a:hover{color:#f6911b}
+.sub-nav-menu2  {position:absolute;left:0;top:0;width:900px;}
+.sub-nav-menu2 ul {height:45px;}
+.sub-nav-menu2 ul li {display:inline-block; text-align:center; width:126px;height:45px;line-height:45px;font-size:1.6rem;font-family:'NanumBarunGothicBold'}
+.sub-nav-menu2 ul li a {display:block;width:126px;height:45px;}
+.sub-nav-menu2 ul li a:hover{color:#035fb6}
+
+
+.notice-wrap{position:absolute;top:0;right:0;width:300px;height:60px;background-color:#f6911b}
+.notice-wrap .title{display:inline-block;width:64px;height:25px;padding-left:30px;margin-left:29px;background:url(../images/icon_notice.png) no-repeat 0 50%;line-height:1.8;font-size:1.4rem;vertical-align:middle}
+.notice-wrap .text{display:inline-block;width:156px;height:25px;margin-top:18px;font-size:1.2rem;line-height:2.2}
+.notice-wrap .text a:hover{text-decoration:underline ;}
+.notice-wrap .btn-more-notice{display:inline-block;width:20px;height:20px;background:url(../images/btn_more_notice.png) no-repeat 0 50%;overflow:hidden;text-indent:100%;white-space:nowrap;vertical-align:middle}
+.sub-gohome-wrap{position:absolute;top:0;right:0;width:300px;height:45px;padding-top:18px;background-color:#035fb6}
+.sub-gohome-wrap .title{display:inline-block;width:230px;height:25px;padding-left:30px;margin-left:29px;background:url(../images/icon_home.png) no-repeat 0 50%;line-height:1.8;font-size:1.4rem;vertical-align:middle}
+.sub-gohome-wrap .title a:hover{text-decoration:underline ;}
+.sub-gohome-wrap .btn-gohome{display:inline-block;width:20px;height:20px;background:url(../images/btn_go.png) no-repeat 0 50%;overflow:hidden;text-indent:100%;white-space:nowrap;vertical-align:middle}
+.sub-gossamtong-wrap{position:absolute;top:0;right:0;width:300px;height:45px;line-height:45px;background-color:#035fb6}
+.sub-gossamtong-wrap .title{display:inline-block;width:230px;height:25px;padding-left:30px;margin-left:29px;background:url(../images/icon_home.png) no-repeat 0 50%;line-height:1.8;font-size:1.4rem;vertical-align:middle}
+.sub-gossamtong-wrap .title a:hover{text-decoration:underline ;}
+.sub-gossamtong-wrap .btn-gohome{display:inline-block;width:20px;height:20px;background:url(../images/btn_go.png) no-repeat 0 50%;overflow:hidden;text-indent:100%;white-space:nowrap;vertical-align:middle}
+
+/* 서브 컨텐츠 레이아웃 */
+.sub-home-section{position:relative;width:1200px;min-height:650px;margin:0 auto;}
+.sub-section{position:relative;width:1200px;min-height:650px;margin:0 auto;padding-top:40px;padding-bottom:100px;}
+.sub-home-section h2{padding:23px 0 18px 0;font-family: 'NanumBarunGothicBold';font-size:1.6rem;color:#333;}
+.sub-home-section h2 .btn-more{display:inline-block;width:16px;height:16px;margin-left:8px;background:url(../images/btn_more.png) no-repeat 50% 0;overflow:hidden;text-indent:100%;white-space:nowrap;vertical-align:middle}
+.sub-home-section h2 a:hover{text-decoration:underline}
+.lnb-wrap{position:relative;float:left;width:200px;margin-right:60px}
+.lnb-wrap h2{line-height:0.1}
+.lnb-menu{margin-bottom:50px;}
+.lnb-menu li{padding-left:20px;background:url(../images/lnb_bull.png) no-repeat 100% 0;border-bottom:1px solid #e4e4e4;font-family: 'NanumBarunGothicBold';color:#666;font-size:1.5rem;line-height:2.8}
+.lnb-menu li.on{background:url(../images/lnb_bull.png) no-repeat 100% -44px;color:#f6911b;}
+.lnb-menu li.on-sub{background:url(../images/lnb_bull.png) no-repeat 100% -88px;color:#f6911b;background-color:#f1f1f1;border-bottom:1px solid #fff}
+.lnb-menu li.sub{background:none;background-color:#f1f1f1;border-bottom:none}
+.lnb-menu li a:hover{text-decoration:underline}
+.lnb-menu-sub{padding:10px 0}
+.lnb-menu-sub li{padding:0;background:none;border:none;font-size:1.4rem;line-height:2;color:#666;font-family: 'NanumBarunGothic';}
+.lnb-menu-sub li.on{color:#333;border:none;background:none;}
+
+.sub-contents-wrap{position:relative;float:left;width:940px;}
+.sub-contents-wrap h3{position:relative;height:114px;color:#333;font-size:4rem;font-weight:normal;line-height:2.5}
+.sub-contents-wrap h3 span{position:absolute;bottom:22px;display:inline-block;height:50px;margin-left:20px;font-size:1.4rem;font-weight:normal;color:#999;}
+.sub-contents-wrap h3 p{position:absolute;top:29px;display:inline-block;height:50px;margin-left:20px;font-size:1.4rem;font-weight:normal;color:#999;line-height:1.4}
+ 
+.sub-contents-wrap h4{width:940px;margin-top:45px;font-family: 'NanumBarunGothicBold';font-size:2.2rem;color:#333;line-height:2.5}
+.sub-contents-wrap h5{display:inline;padding-top:18px;border-top:3px solid #333;font-size:3rem;color:#333;line-height:2.5;font-weight:normal;}
+.sub-contents-wrap h6{font-size:3rem;color:#333;line-height:2;font-weight:normal;}
+.sub-contents-wrap a.btn-top{position:absolute;bottom:0;right:40px;display:block;width:24px;height:24px;background:url(../images/btn_top.png) no-repeat;overflow:hidden;text-indent:100%;white-space:nowrap;}
+
+
+/* 서브 카테고리 */
+.sub-category-wrap{position:absolute;top:60px;left:0;color:#666;z-index:200}
+.sub_category_view{display: none;position: absolute;height:345px; width:901px;top:-15px;z-index:200;background:#fff;border:1px solid #078b76;border-top:none}
+.sub_category_view ul {display: block;float:left;width:145px;height:270px;}
+.sub_category_view ul li {display: block;width:145px;height:26px;font-size:1.4rem;font-family: 'NanumBarunGothic';line-height:1.8;border-right:1px solid #e4e4e4;}
+.sub_category_view ul li:first-child{border-right:none;height:16px}
+.sub_category_view ul li a {display: block;width:145px;height:26px;}
+.sub_category_view ul li a:hover {text-decoration:underline}
+.sub_category_view ul li.bdr-no{border-right:none}
+.sub_category_tchroom_view{display: none;position: absolute;height:315px; width:901px;top:-15px;z-index: 200;background:#fff;border:1px solid #f6911b;border-top:none}
+.sub_category_tchroom_view ul {display:block;float:left;width:128px;height:215px;border-right:1px solid #ebebeb; margin-top:10px;}
+.sub_category_tchroom_view ul:last-child{border-right:none;}
+.sub_category_tchroom_view ul li {display:block;height:26px;font-size:1.4rem;font-family: 'NanumBarunGothic';line-height:1.8;}
+.sub_category_tchroom_view ul li:first-child{border-right:none;height:16px}
+.sub_category_tchroom_view ul li a {display: block;width:126px;height:26px;}
+.sub_category_tchroom_view ul li a:hover {text-decoration:underline}
+.sub_category_tchroom_view ul li.bdr-no{border-right:none}
+.sub_category_tchroom_view .w_banner{position: absolute;bottom:2px;left: 6px;}
+.sub_category_tchroom_view .w_banner > img.pn{margin-right:2px;}
+/* 보건교사방 홈 */
+.tchroom-section1{position:relative;height:315px;border-bottom:1px solid #e4e4e4;}
+.tchroom-section2 {position:relative;}
+.tchroom-section2 .left-wrap{position:relative;float:left;width:900px;line-height:0.6;}
+.tchroom-section2 .right-wrap{position:relative;float:left;width:300px;border-left:1px solid #e4e4e4}
+/* 나의 활동내역 */
+.tchroom-section1 .my-info{float:left;width:300px;height:313px;background:#f3f3f3}
+.tchroom-section1 .my-info h2{padding-left:30px;}
+.tchroom-section1 .my-info dl{background:url(../images/dash_line.png) repeat-x;}
+.tchroom-section1 .my-info dt{display:inline-block;width:205px;height:55px;padding-left:40px;font-size:1.5rem;line-height:5.5}
+.tchroom-section1 .my-info dt img{margin-right:8px;vertical-align:middle}
+.tchroom-section1 .my-info dt a:hover{text-decoration:underline}
+.tchroom-section1 .my-info dd{display:inline-block;color:#999;text-decoration:underline}
+.tchroom-section1 .my-info dd span{display:inline-block;height:20px;padding:4.5px 8px;margin-right:8px;background:#f6911b;border-radius:10px;color:#fff;font-size:1.2rem;font-family: 'NanumBarunGothicBold';}
+/* 전문가상담 게시판 - 전문가상담사례 BEST */
+.tchroom-section1 .consulting-box{float:left;width:600px;height:313px;padding-left:30px;border-left:1px solid #e4e4e4}
+.tchroom-section1 .consulting-box .list{float:left;width:260px;height:313px;margin-right:20px;}
+.tchroom-section1 .consulting-box .list .title{display:block;width:260px;margin-top:10px;font-size:1.5rem;font-family: 'NanumBarunGothicBold';color:#333;line-height:1.8;text-overflow: ellipsis;overflow: hidden;white-space:nowrap;}
+.tchroom-section1 .consulting-box .list .text{display:block;width:260px;font-size:1.2rem;line-height:1.4;}
+.tchroom-section1 .consulting-box .list .img-box{display:block;width:260px;height:146px;margin-top:5px;overflow: hidden;}
+.tchroom-section1 .consulting-box .list .img-box img{transition:.3s;}
+.tchroom-section1 .consulting-box .list .img-box:hover img{ transform:scale(1.06);}
+.tchroom-section1 .consulting-box .list a:hover{text-decoration:underline}
+/* 이메딕웹툰 */
+.tchroom-section1 .tchroom-webtoon-box{position:relative;float:left;width:300px;height:313px;padding-left:30px;}
+.tchroom-section1 .tchroom-webtoon-box .txt-box{display:inline-block;margin-top:10px;line-height:1.8}
+.tchroom-section1 .tchroom-webtoon-box .title{color:#f6911b;margin-right:5px;font-size:1.8rem;font-family: 'NanumBarunGothicBold';}
+.tchroom-section1 .tchroom-webtoon-box .btn-gowebtoon{position:absolute;bottom:25px;right:25px;display:block;width:31px;height:31px;background:url(../images/btn_go_orange.png) no-repeat;overflow:hidden;text-indent:100%;white-space:nowrap;}
+/* 질병관리본부소식 */
+.tchroom-section2 .disease-news-box{float:left;width:300px;height:193px;padding-left:30px;border-bottom:1px solid #e4e4e4}
+.tchroom-section2 .disease-news-box .txt-box{display:inline-block;width:140px;padding-left:15px;margin-top:10px;line-height:1.4;word-break:keep-all}
+.tchroom-section2 .disease-news-box .txt-box .title{display:block;color:#035fb6;margin-bottom:5px;font-size:1.8rem;font-family: 'NanumBarunGothicBold';}
+.tchroom-section2 .disease-news-box img{float:left;margin-top:10px;vertical-align:top}
+/* 세상사 */
+.tchroom-section2 .people-news-box{float:left;width:600px;height:193px;padding-left:30px;border-left:1px solid #e4e4e4;border-bottom:1px solid #e4e4e4}
+.tchroom-section2 .people-news-box li{float:left;width:260px;height:100px;margin-right:20px;}
+.tchroom-section2 .people-news-box .img-box{float:left;display:block;width:100px;height:100px;margin-right:15px;overflow: hidden;}
+.tchroom-section2 .people-news-box .img-box img{transition:.3s;}
+.tchroom-section2 .people-news-box .img-box:hover img{ transform:scale(1.07);}
+.tchroom-section2 .people-news-box .txt-box{width:140px;line-height:1.4}
+.tchroom-section2 .people-news-box .title{display:block;margin-bottom:10px;font-size:1.4rem;font-family: 'NanumBarunGothicBold';color:#333;}
+ /* 건강칼럼 */
+.tchroom-section2 .health-column-box{float:left;width:300px;height:200px;padding-left:30px;border-bottom:1px solid #e4e4e4}
+.tchroom-section2 .health-column-box .txt-box{display:inline-block;width:140px;padding-left:15px;margin-top:10px;line-height:1.4;word-break:keep-all}
+.tchroom-section2 .health-column-box .txt-box .title{display:block;color:#035fb6;margin-bottom:5px;font-size:1.8rem;font-family: 'NanumBarunGothicBold';}
+.tchroom-section2 .health-column-box img{float:left;margin-top:10px;vertical-align:top}
+/* 보건실 희노애락 */
+.tchroom-section2 .tchroom-community-box{float:left;width:299px;height:200px;padding-left:30px;border-left:1px solid #e4e4e4;border-bottom:1px solid #e4e4e4}
+.tchroom-section2 .tchroom-community-box li{width:240px;height:24px;line-height:2;text-overflow: ellipsis;overflow:hidden;white-space: nowrap;}
+.tchroom-section2 .tchroom-community-box li img{margin-right:3px;}
+/* 나만의 노하우 */
+.tchroom-section2 .tchroom-knowhow-box{float:left;width:301px;height:200px;padding-left:30px;border-left:1px solid #e4e4e4;border-bottom:1px solid #e4e4e4}
+.tchroom-section2 .tchroom-knowhow-box li{width:240px;height:24px;line-height:2;text-overflow: ellipsis;overflow:hidden;white-space: nowrap;}
+.tchroom-section2 .tchroom-knowhow-box li img{margin-right:8px;vertical-align:middle}
+/* 궁금타 */
+.tchroom-section2 .question-box{float:left;width:300px;height:208px;padding-left:30px;border-bottom:1px solid #e4e4e4}
+.tchroom-section2 .question-box ul{margin-top:10px;}
+.tchroom-section2 .question-box li{width:245px;height:55px;padding-left:45px;background:url(../images/qna_icon_q_on2.png) no-repeat 0 0;line-height:1.4}
+/* 계통별 질환정보 */
+.tchroom-section2 .disease-info-box{float:left;width:299px;height:208px;padding-left:30px;border-left:1px solid #e4e4e4;border-bottom:1px solid #e4e4e4}
+.tchroom-section2 .disease-info-box li{width:240px;height:24px;line-height:2;text-overflow: ellipsis;overflow:hidden;white-space: nowrap;}
+.tchroom-section2 .disease-info-box li img{margin-right:3px;}
+/* 계절별 유행질환 */
+.tchroom-section2 .epidemic-box{float:left;width:301px;height:208px;padding-left:30px;border-left:1px solid #e4e4e4;border-bottom:1px solid #e4e4e4}
+.tchroom-section2 .epidemic-box .img-box{display:block;width:240px;height:87px;margin-top:5px;overflow: hidden;}
+.tchroom-section2 .epidemic-box .img-box img{transition:.3s;}
+.tchroom-section2 .epidemic-box .img-box:hover img{ transform:scale(1.06);}
+.tchroom-section2 .epidemic-box p{margin-top:12px;font-size:1.6rem}
+/* 온라인강의 */
+.tchroom-section2 .tchroom-vod-box{position:relative;width:299px;height:393px;padding-left:30px;border-bottom:1px solid #e4e4e4}
+.tchroom-section2 .tchroom-vod-box .vod{position:relative;width:242px;height:140px;margin-bottom:18px;overflow:hidden}
+.tchroom-section2 .tchroom-vod-box .vod img{width:100%}
+.tchroom-section2 .tchroom-vod-box .vod .blind-box{position:absolute;top:0;left:0;width:242px;height:140px;background:rgba(0,0,0,0.5);color:#fff}
+.tchroom-section2 .tchroom-vod-box .vod .blind-box .title{display:block;padding:115px 15px 10px 15px;  font-family: 'NanumBarunGothicBold';text-overflow: ellipsis;overflow:hidden;white-space: nowrap;}
+.tchroom-section2 .tchroom-vod-box .vod .btn-play-s{position:absolute;top:53px;left:106px;display:block;width:29px;height:29px;background:url(../images/btn_vod_play_s.png) no-repeat 0 0;overflow:hidden;text-indent:100%;white-space:nowrap;}
+/* 이메딕에 바란다 */
+.tchroom-section2 .tchroom-wish-box{width:299px;height:208px;padding-left:30px;border-bottom:1px solid #e4e4e4}
+.tchroom-section2 .tchroom-wish-box li{width:240px;height:24px;line-height:2;text-overflow: ellipsis;overflow:hidden;white-space: nowrap;}
+.tchroom-section2 .tchroom-wish-box li img{margin-right:3px;}
+
+.tchroom-section2 .tchroom-community-box li a:hover, .tchroom-section2 .tchroom-knowhow-box li a:hover, .tchroom-section2 .disease-info-box li a:hover, .tchroom-section2 .tchroom-wish-box li a:hover, .tchroom-section2 .tchroom-vod-box .vod .blind-box .title a:hover, .tchroom-section2 .epidemic-box a:hover, .tchroom-section2 .people-news-box li a:hover, .tchroom-section2 .question-box li a:hover, .tchroom-section2 .disease-news-box a:hover, .tchroom-section2 .health-column-box a:hover{text-decoration:underline}
+
+/* 쌤통 홈 */
+.ssam-profile-box .ssam-photo{display:block;width:88px;height:88px;margin:0 auto;border-radius:44px;overflow:hidden}
+.ssam-profile-box .ssam-name{color:#333;font-size:1.6rem;line-height:3;font-family: 'NanumBarunGothicBold';}
+.ssam-profile-box  ul{position:relative;margin-left:15px}
+.ssam-profile-box li{position:relative;float:left;width:45%;height:28px;margin-right:5px;text-align:left}
+.ssam-profile-box li span{position:absolute;top:-4px;right:0;display:inline-block;height:20px;padding:4.5px 8px;background:#f6911b;border-radius:10px;color:#fff;font-size:1.2rem;font-family: 'NanumBarunGothicBold';}
+.ssam-profile-box .btn-subscription{position:absolute;bottom:0;left:0;display:block;width:200px;height:49px;background:#f6911b;color:#fff;font-size:1.4rem;line-height:3.6}
+.ssam-info-box{position:relative;width:200px;border:1px solid #e4e4e4;border-top:2px solid #666;}
+.ssam-info-box .title{display:inline-block;width:200px;padding:25px 0 20px 0 ;color:#333;font-size:1.8rem;font-family: 'NanumBarunGothicBold';text-align:center}
+.ssam-info-box .list{width:140px;margin:0 auto;margin-bottom:20px;font-size:1.4rem;color:#333;}
+.ssam-info-box .list li{padding:10px 0;border-top:1px solid #999;line-height:1.4} 
+.ssam-info-box .list li span{display:inline-block;width:38px;font-size:1.1rem;}
+.ssam-info-box .list li span.mg-r10{margin-right:10px}
+.ssam-info-box .list li span img{margin-right:5px;vertical-align:middle}
+.ssam-info-box .list li:last-child{border-bottom:1px solid #999;}
+.ssam-info-box .list li span a:hover{text-decoration:underline}
+.ssam-info-box .btn-box{height:52px;border-top:1px solid #e4e4e4;}
+.ssam-info-box .btn-box li{float:left;border-right:1px solid #e4e4e4;line-height:0.6}
+.ssam-info-box .btn-box li:last-child{border-right:none;}
+ 
+.ssamtong-contents-box{width:940px;margin-top:50px;}
+.ssamtong-contents-box h4{width:940px;margin-bottom:20px;border-bottom:2px solid #333;font-family: 'NanumBarunGothic';color:#333;font-size:2.4rem;font-weight:normal;line-height:2.2;}
+.ssamtong-contents-box img{vertical-align:top;}
+.ssamtong-contents-box .list{display:inline-block;width:430px;margin:0 20px 0 10px} 
+.ssamtong-contents-box .list li{font-size:1.6rem;line-height:1.8;text-overflow: ellipsis;overflow: hidden;white-space:nowrap;}
+.ssamtong-contents-box .list li img{margin-right:10px;vertical-align:middle;}
+.ssamtong-knowhow li{float:left;width:227px;margin-right:10px}
+.ssamtong-knowhow li:last-child{margin-right:0}
+.ssamtong-knowhow .title{display:block;width:220px;margin-top:10px;font-size:1.6rem;font-family: 'NanumBarunGothicBold';color:#333;line-height:1.8;text-overflow: ellipsis;overflow: hidden;white-space:nowrap;}
+.ssamtong-knowhow .text{display:block;width:220px;font-size:1.2rem;line-height:1.4;word-break:keep-all}
+.ssamtong-knowhow .img-box{display:block;width:225px;height:145px;overflow: hidden;}
+.ssamtong-knowhow .img-box img{transition:.3s;}
+.ssamtong-knowhow .img-box:hover img{ transform:scale(1.06);}
+.ssamtong-knowhow a:hover{text-decoration:underline}
+.ssamtong-question-box{position:relative;width:940px;height:155px;}
+.ssamtong-question-box li{position:relative;float:left;width:470px;height:155px;background:url(../images/qna_icon_q_on2.png) no-repeat 27px 31px;background-color:#f6f6f6}
+.ssamtong-question-box li.on{background-color:#ececec}
+.ssamtong-question-box li .name{display:block;margin:40px 80px 10px 80px;font-size:1.4rem;font-family: 'NanumBarunGothicBold';}
+.ssamtong-question-box li .btn{position:absolute;top:65px;right:30px;display:block;width:30px;height:30px;background:url(../images/arrow.png) no-repeat 50% 50%;overflow:hidden;text-indent:100%;white-space:nowrap;}
+.ssamtong-question-box li p{margin:0 80px 10px 80px;font-size:1.8rem;color:#035fb6;word-break:keep-all}
+.ssamtong-banner-wrap{width:100%}
+.ssamtong-banner-wrap div{width:1200px;margin:0 auto;border-top:1px solid #e4e4e4;line-height:0.6;}
+.ssamtong-banner-wrap .line-r{border-right:1px solid #e4e4e4;}
+.ssamtong-contents-box a:hover{text-decoration:underline}
+.pd-l10{padding-left:10px}
+
+/* 검색 */
+.sub-search-box{clear:both;width:940px;height:98px;padding-top:26px;margin:20px 0px;background:#f8f8f8;border:1px solid #e4e4e4;vertical-align:middle}
+.sub-search-box .title{display:inline-block;width:190px;margin:0 20px 0 34px;color:#333;font-family: 'NanumBarunGothicBold';font-size:1.6rem;vertical-align:middle;}
+.sub-search-box .title2{margin:0 28px 0 34px;color:#333;font-family: 'NanumBarunGothicBold';font-size:1.6rem;vertical-align:middle;}
+.sub-search-box .title img, .sub-search-box .title2 img{margin-right:10px;vertical-align:middle;}
+.sub-search-box .btn-search{display:inline-block;width:72px;height:34px;background:#035fb6;color:#fff;line-height:2.8;text-align:center;vertical-align:middle}
+.sub-search-box .btn-search-study{display:inline-block;width:72px;height:34px;background:#035fb6;color:#fff;line-height:2.8;text-align:center;vertical-align:middle}
+.mg-r6{margin-right:6px;}
+
+/* 안내문구 */
+.text-info{color:#999;font-size:1.4rem;line-height:1.8;word-break:keep-all}
+
+/* 카테고리 */
+.sub-category-box{width:941px;height:98px;margin-bottom:20px;background:#f8f8f8;border-top:1px solid #e4e4e4;border-left:1px solid #e4e4e4;vertical-align:middle}
+.sub-category-box li{float:left;width:188px;height:48px;border-right:1px solid #e4e4e4;border-bottom:1px solid #e4e4e4;font-size:1.6rem;line-height:3.2;text-align:center}
+.sub-category-box li.on{background:#d5d5d5;color:#333;font-family: 'NanumBarunGothicBold'}
+.sub-category-box li a:hover{text-decoration:underline}
+
+/* 서브컨텐츠-텍스트 */
+.sub-text-box{position:relative;margin-top:45px;}
+.sub-text-box h4{width:940px;border-bottom:2px solid #333;font-family: 'NanumBarunGothicBold';font-size:2.2rem;color:#333;line-height:2.8}
+.sub-text-box img{margin-top:45px}
+.sub-text-box p{margin-top:30px;font-family: 'NanumBarunGothic';font-size:1.6rem;line-height:2;color:#444;white-space:pre-wrap}
+
+/* 서브컨텐츠- 응급처치 */
+.sub-emergency-box{position:relative;margin-top:45px;}
+.sub-emergency-box .title{height:46px;padding-left:20px;border-top:1px solid #333;border-bottom:1px solid #d7d7d7;font-family: 'NanumBarunGothicBold';font-size:1.8rem;color:#333;line-height:2.6}
+.sub-emergency-box .txt{padding:20px 20px 55px 20px;}
+.sub-emergency-box p{font-family: 'NanumBarunGothic';font-size:1.6rem;line-height:1.6;color:#777777;white-space:pre-wrap;}
+
+/* 서브컨텐츠- 강의실 동영상 보기 */
+.vod-list1{position:relative;height:245px;padding-top:45px;border-top:2px solid #333;} 
+.vod-list1 li{position:relative;float:left;width:230px;line-height:1.4;margin-right:6px;}
+.vod-list1 li:last-child{margin-right:0;}
+.vod-list1 li .title{display:block;margin-top:10px;font-size:1.4rem;font-family: 'NanumBarunGothicBold';color:#333;line-height:1.8;}
+.vod-list1 li .text{display:inline-block;font-size:1.3rem;}
+.vod-list1 .img-box{display:block;width:230px;height:145px;overflow: hidden;}
+.vod-list1 .blind-box{position:absolute;top:0;left:0;width:230px;height:145px;background:rgba(51,51,51,0.55);color:#fff}
+.vod-list1 .btn-play-s{position:absolute;top:60px;left:100px;display:block;width:29px;height:29px;background:url(../images/btn_vod_play_s.png) no-repeat 0 0;overflow:hidden;text-indent:100%;white-space:nowrap;}
+.vod-list1 li a:hover{text-decoration:underline}
+
+.vod-list2{position:relative;width:940px;margin-top:60px;border-top:1px solid #606060} 
+.vod-list2 li{position:relative;height:186px;border-bottom:1px solid #f0f0f0}
+.vod-list2 .img-box{position:relative;display:block;float:left;width:230px;height:145px;margin-top:20px;overflow: hidden;}
+.vod-list2 .blind-box{position:absolute;top:0;left:0;width:230px;height:145px;background:rgba(51,51,51,0.55);color:#fff}
+.vod-list2 .btn-play-s{position:absolute;top:60px;left:100px;display:block;width:29px;height:29px;background:url(../images/btn_vod_play_s.png) no-repeat 0 0;overflow:hidden;text-indent:100%;white-space:nowrap;}
+.vod-list2 .txt-box{display:block;float:left;width:420px;height:145px;margin-top:20px;margin-left:46px;font-size:1.6rem;overflow: hidden;}
+.vod-list2 li .dir{display:inline-block;width:47px;height:25px;margin-right:10px;background:#525252;color:#fff;font-family: 'NanumBarunGothicBold';font-size:1.2rem;text-align:center;line-height:2.2;vertical-align:middle}
+.vod-list2 li .dir-txt{font-family: 'NanumBarunGothicBold';color:#333} 
+.vod-list2 li .title{margin-bottom:10px;color:#333;font-size:2.4rem;}
+.vod-list2 li .text{display:inline-block;margin-top:6px;font-size:1.6rem;color:#888;line-height:1.8;vertical-align:middle;}
+.vod-list2 li a:hover{text-decoration:underline}
+.vod-list2 .info{position:absolute;bottom:10px;right:10px;}
+.vod-list2 .info li{display:inline-block;height:24px;margin-left:20px;font-size:1.2rem;line-height:1.8;color:#888;border-bottom:none;vertical-align:middle;}
+.vod-list2 .info li .txt1{color:#333;margin-right:2px;}
+.vod-list2 .info li .txt2{color:#035fb6;margin-left:5px;}
+
+.vod-view-head{position:relative;width:940px;height:222px;margin-top:28px;} 
+.vod-view-head .img-box{display:block;float:left;width:322px;height:222px;overflow: hidden;}
+.vod-view-head .txt-box{position:relative;display:block;float:left;width:580px;height:222px;margin-left:30px;font-size:1.6rem;overflow: hidden;}
+.vod-view-head .dir{display:inline-block;width:47px;height:25px;margin-right:10px;background:#525252;color:#fff;font-family: 'NanumBarunGothicBold';font-size:1.2rem;text-align:center;line-height:2.2;vertical-align:middle}
+.vod-view-head .dir-txt{font-family: 'NanumBarunGothicBold';color:#333} 
+.vod-view-head .title{margin-bottom:10px;color:#333;font-size:3.0rem;}
+.vod-view-head .text{display:inline-block;margin-top:6px;font-size:1.6rem;color:#888;line-height:1.8;vertical-align:middle;}
+.vod-view-head dl{widt:580px;height:33px;background:#f7f7f7;margin-top:10px;border-top:1px solid #e3e3e3;border-bottom:1px solid #e3e3e3;font-size:1.4rem;line-height:2.4}
+.vod-view-head dt{display:inline-block;width:118px;padding-left:20px;font-size:1.2rem;}
+.vod-view-head dd{display:inline-block;color:#333;}
+.vod-view-head dt img{vertical-align:middle}
+.vod-view-head ul{position:absolute;bottom:0;left:0;}
+.vod-view-head li{display:inline-block;height:24px;margin-right:20px;font-size:1.4rem;line-height:1.8;color:#888;border-bottom:none;vertical-align:middle;}
+.vod-view-head li .txt1{color:#333;margin-right:2px;}
+.vod-view-head li .txt2{color:#035fb6;margin-left:5px;}
+
+.vod-view-play{position:relative;width:940px;margin-top:40px;padding:50px 0 30px 0;border-top:1px solid #e2e2e2} 
+.vod-view-play .play-box{position:relative;max-width:870px;margin:0 auto;line-height:0.6}
+.vod-view-play .play-box .btn-play{position:absolute;top:calc(50% - 38.5px);left:calc(50% - 38.5px);display:block;width:69px;height:69px;background:url(../images/btn_vod_play.png) no-repeat 0 0;overflow:hidden;text-indent:100%;white-space:nowrap;}
+.vod-view-play .play-box .btn-stop{position:absolute;top:calc(50% - 38.5px);left:calc(50% - 38.5px);display:block;width:69px;height:69px;background:url(../images/btn_vod_stop.png) no-repeat 0 0;overflow:hidden;text-indent:100%;white-space:nowrap;}
+.vod-view-play .play-box .loading-bar{position:absolute;bottom:40px;left:30px;display:block;width:800px;height:12px;background:#fff;border-radius:6px;}
+.vod-view-play .play-box .loading-bar-blue{position:absolute;bottom:0;left:0;display:block;height:12px;background:#035fb6;border-radius:6px;}
+.vod-view-play .play-box .blind-box{position:absolute;bottom:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.7);color:#fff}
+
+.vod-view-reply-box{position:relative;width:940px;border-top:1px solid #606060} 
+.vod-view-reply{position:relative;margin-top:15px;border-top:1px solid #e2e2e2}
+.vod-view-reply li{position:relative;padding:22px 40px;border-bottom:1px solid #e2e2e2}
+.vod-view-reply li.reply-reply{padding:22px 40px 22px 105px;background:#f8f8f8}
+.vod-view-reply .title{margin-bottom:20px;font-family: 'NanumBarunGothicBold';color:#333;font-size:1.6rem;}
+.vod-view-reply .title span{margin-left:22px;font-family: 'NanumBarunGothic';font-size:1.4rem;}
+.vod-view-reply .txt{margin-bottom:30px;font-size:1.6rem;line-height:1.8}
+.vod-view-reply .btn-reply{display:inline-block;width:70px;height:28px;background:#fff;border:1px solid #cbcbcb;border-radius:5px;font-family: 'NanumBarunGothicBold';color:#333;font-size:1.4rem;line-height:2.1;text-align:center}
+.vod-view-reply .btn-reply span{margin-left:2px;color:#035fb6}
+.vod-view-reply .icon-reply{position:absolute;top:25px;left:57px;display:inline-block;width:27px;height:27px;background:url(../images/icon_reply2.png) no-repeat;}
+.sub-star-box{width:940px;height:98px;padding-top:31px;margin-top:20px;background:#f8f8f8;border:1px solid #e4e4e4;vertical-align:middle}
+.sub-star-box .btn-write{display:inline-block;width:72px;height:34px;background:#035fb6;color:#fff;line-height:2.5;text-align:center;vertical-align:middle}
+.sub-star-box ul{display:inline-block;margin-left:28px;margin-right:28px;vertical-align:middle}
+.sub-star-box li{float:left;width:37px;height:30px;background:url(../images/star_gray.png) no-repeat}
+.sub-star-box li.on{background:url(../images/star_orange.png) no-repeat}
+
+
+/* 서브컨텐츠-상품리스트 */
+.sub-product-box{position:relative;margin-top:30px;}
+.sub-product-box h4{width:940px;border-bottom:4px solid #333;font-family: 'NanumBarunGothicBold';font-size:2.2rem;color:#333;line-height:2.8}
+.sub-product-box .tab-box{position:relative;height:40px;padding-top:20px;}
+.sub-product-box .tab-box li{float:left;padding:0 16px;color:#999;background:url(../images/dot_bar.png) no-repeat 100% 0;}
+.sub-product-box .tab-box li.on{font-family: 'NanumBarunGothicBold';color:#f6911b ;}
+.sub-product-box .tab-box li.on img{margin-right:4px;vertical-align:middle}
+.sub-product-box .tab-box .btn{position:absolute;top:12px;right:0;width:120px;height:30px;background:#333;border-radius:17px;font-family: 'NanumBarunGothicBold';color:#fff;line-height:2.3;text-align:center;}
+.sub-product-box .tab-box li:first-child{padding-left:0}
+.sub-product-box .tab-box li:last-child{background:none}
+.sub-product-box .tab-box li a:hover{text-decoration:underline}
+.sub-product-box .product-list{position:relative;width:940px;padding-top:20px;}
+.sub-product-box .product-list li{position:relative;float:left;width:214px;height:353px;margin-bottom:30px;border:1px solid #e4e4e4;border-collaps:collapse;display:table-cell }
+.sub-product-box .product-list li p{text-align:center}
+.sub-product-box .product-list li p.name{font-size:1.6rem;color:#444;font-family: 'NanumBarunGothicBold';}
+.sub-product-box .product-list li p.spec{font-size:1.4rem;color:#999}
+.sub-product-box .product-list li p.price{padding-top:10px;font-size:1.6rem;color:#035fb6;font-family: 'NanumBarunGothicBold';}
+.sub-product-box .product-list li .img-box{display:block;margin:0 auto;margin-top:48px;margin-bottom:12px;;width:140px;height:140px;background:url(../images/product_sample.png) no-repeat 50% 50%}
+.sub-product-box .product-list li .btn-box{position:absolute;bottom:0;left:0;display:block;width:212px;height:48px;background:#fff;border-top:1px solid #e4e4e4;}
+.sub-product-box .product-list .btn-cart{display:inline-block;width:47px;height:47px;vertical-align:middle;background: url(../images/btn_cart.png) no-repeat;background-color:#f7f7f7;border-right:1px solid #e4e4e4;overflow:hidden;text-indent:100%;white-space:nowrap;vertical-align:middle}
+.sub-product-box .product-list a.btn-cart:hover{background: url(../images/btn_cart.png) no-repeat 0 -49px;}
+.sub-product-box .product-list .btn-wishlist{display:inline-block;width:47px;height:47px;vertical-align:middle;background: url(../images/btn_wishlist.png) no-repeat;background-color:#f7f7f7;overflow:hidden;text-indent:100%;white-space:nowrap;vertical-align:middle}
+.sub-product-box .product-list a.btn-wishlist:hover{background: url(../images/btn_wishlist.png) no-repeat 0 -49px;}
+.brand-img-ov{position:absolute;top:0;left:-1px;display:block;width:213px;height:303px;}
+.brand-img-ov a:hover{width:212px;height:349px;background-color: rgba( 0, 0, 0, 0.6 ); background-size:100%;border:2px solid #035fb6;}
+.mg-r28{margin-right:28px}
+.sub-product-box .product-list .text-over{position:absolute;top:0;left:0;display:block;width:213px;height:303px;padding:170px 26px 0 26px;background-color: rgba( 0, 0, 0, 0.6 ); background-size:100%;color:#fff;z-index:100;text-align:center}
+.sub-product-box .product-list .text-over p{margin-bottom:10px;height:80px;font-size:1.2rem;text-align:left}
+.sub-product-box .product-list .text-over .reply{text-align:center;font-size:1.5rem;font-family: 'NanumBarunGothicBold';}
+.sub-product-box .product-list .text-over .reply img{vertical-align:middle;padding-right:10px;}
+.sub-product-box .product-list .new-icon{position:absolute;top:20px;left:20px;width:50px;height:50px;background: url(../images/icon_new.png) no-repeat;overflow:hidden;text-indent:100%;white-space:nowrap;}
+
+/* 서브컨텐츠-qna */
+.accordion-box{position:relative;border-top:2px solid #333;margin-top:68px;}
+.accordion-box li{position:relative;color:#444;font-size:1.6rem;line-height:1.8;}
+.accordion {display:inline-block;height:60px;padding:14px 10px 14px 90px;background:url(../images/qna_icon_q.png) no-repeat 29px 12px;border-bottom:1px solid #cccccc;color:#333;width: 100%;cursor: pointer;}
+.accordion.active{background:url(../images/qna_icon_q_on.png) no-repeat 29px 12px;color:#035fb6;font-family: 'NanumBarunGothicBold'}
+.accordion:after{position:relative;top:10px;float:right;background: url(../images/qna_icon_open.png) no-repeat;display:inline-block;width:40px;height:40px;content:"";}
+.accordion.active:after {background:url(../images/qna_icon_close.png) no-repeat;content:"";	}
+li.panel {max-height:0;overflow: hidden;transition: max-height 0.2s ease-out;background:url(../images/qna_icon_a.png) no-repeat 29px 22px;background-color:#f7f6f5;}
+li.panel p{padding:26px 90px;border-bottom:1px solid #cccccc;color:#666;font-size:1.4rem;line-height:2.2;white-space:pre-wrap}
+.floating-box{position:fixed;top:0;right:0;width:71px;height:100vh;background:#424242}
+.floating-box .btn{display:block;width:47px;height:32px;margin:0 auto;margin-bottom:10px;background:#fff;border-radius:5px;color:42px;font-size:1.2rem;line-height:2.8;text-align:center}
+
+/* 서브컨텐츠 - 건강나침반 */
+.sub-compass-item-box{width:940px;height:348px;margin-bottom:60px;}
+.sub-compass-item-box .tab-box{width:940px;height:33px;border-left:1px solid #e4e4e4;border-top:1px solid #e4e4e4;}
+.sub-compass-item-box .tab-box .comtablinks{float:left;width:469px;height:33px;background:#fff;border-right:1px solid #e4e4e4;border-bottom:1px solid #e4e4e4;font-family: 'NanumBarunGothicBold';color:#444;font-size:1.6rem;line-height:2.1;text-align:center;cursor:pointer}
+.sub-compass-item-box .tab-box .comtablinks.active{background:#035fb6;color:#fff}
+.sub-compass-item-box .tab-box li:last-child{width:470px;}
+.sub-compass-item-box .comtabcontent{width:940px;height:315px;background:#f8f8f8;border:1px solid #e4e4e4}
+.sub-compass-item-box .comtabcontent ul{float:left;width:145px;margin:20px 28px 0 28px;}
+.sub-compass-item-box .comtabcontent li{width:145px;height:26px;margin-bottom:4px;padding:0 12px;background:#dadada;border-radius:17px;color:#666;font-size:1.4rem;line-height:2}
+.sub-compass-item-box .comtabcontent li.on{background:#898989;color:#fff}
+.sub-compass-item-box .item-list{float:left;width:715px;margin-top:20px;background:#fff;}
+.sub-compass-item-box .item-list td{height:33px;border:1px solid #cfcfcf;}
+.sub-compass-item-box .item-list dt{float:left;width:245px;padding-left:20px;color:#333;}
+.sub-compass-item-box .item-list dd{float:left;padding:0 15px;background:url(../images/bar1.png) no-repeat 100% 50%;}
+.sub-compass-item-box .item-list dd:last-child{background:none}
+.sub-compass-item-box .item-list dl a:hover{text-decoration:underline}
+.sub-compass-contents {margin-bottom:200px;}
+.sub-compass-contents p{width:940px;padding:30px 5px;border-top:2px solid #333;border-bottom:1px solid #b5b5b5;font-size:1.8rem;white-space:pre-wrap}
+.sub-compass-contents p span{color:#035fb6}
+.sub-compass-contents th{width:110px;padding:25px 20px;border-bottom:1px solid #e2e2e2;border-right:1px solid #e2e2e2;font-size:1.6rem;font-family: 'NanumBarunGothicBold';color:#333;text-align:left;vertical-align:top}
+.sub-compass-contents td{width:790px;padding:22px 25px;border-bottom:1px solid #e2e2e2;font-size:1.8rem;}
+.sub-compass-contents td ul{line-height:1.6}
+.sub-compass-contents td ul img{margin-right:10px;}
+
+
+/* 서브컨텐츠 - 질병관리본부 */
+.disease-news-list{position:relative;width:870px;height:426px;margin-left:35px;background:url(../images/shelf.png) no-repeat 50% 90%;}
+.disease-news-list li{float:left;padding:38px 30px}
+
+/* 서브컨텐츠 - 홈쿡 플레이팅 */
+.cook-list{}
+.cook-list li{position:relative;float:left;width:220px;height:330px;margin:0 6px;text-align:center}
+.cook-list li .img-box{width:220px;height:220px;border-radius:110px;overflow:hidden}
+.cook-list li .img-box a{position:absolute;top:0;left:0;display:block;width:220px;height:220px;}
+.cook-list li .img-box a:hover{background-color:rgba(3,95,182,0.7);border-radius:110px;}
+.cook-list li .txt-box{display:inline-block;width:180px;height:45px;margin-top:10px;color:#333;font-size:1.8rem;line-height:1.2;word-break:keep-all;overflow:hidden}
+.cook-list li .txt-box a:hover{text-decoration:underline}
+
+/* 서브컨텐츠 - 궁금타 리스트 질문상자 */
+.ssamtong-sub-question-box{position:relative;width:940px;height:155px;border-top:1px solid #333;margin-bottom:46px;}
+.ssamtong-sub-question-box li{position:relative;float:left;width:470px;height:155px;background:url(../images/qna_icon_q_on2.png) no-repeat 27px 31px;border:1px solid #dcdcdc;border-top:none}
+.ssamtong-sub-question-box li .name{display:block;margin:40px 80px 10px 80px;font-size:1.4rem;font-family: 'NanumBarunGothicBold';}
+.ssamtong-sub-question-box li .btn{position:absolute;top:65px;right:30px;display:block;width:30px;height:30px;background:url(../images/arrow.png) no-repeat 50% 50%;overflow:hidden;text-indent:100%;white-space:nowrap;}
+.ssamtong-sub-question-box li .tag{position:absolute;top:0;right:0;display:block;width:44px;height:22px;background:#717171;color:#fff;font-size:1.4rem;text-align:center;line-height:1.6}
+.ssamtong-sub-question-box li p{margin:0 80px 10px 80px;font-size:1.8rem;color:#035fb6;word-break:keep-all}
+.ssamtong-sub-question-box li:last-child{border-left:none}
+.ssamtong-sub-question-box li a:hover{text-decoration:underline}
+
+/* 서브컨텐츠 - 게시판 */
+.board-info-box{position:relative;width:940px;padding:20px 0 }
+.board-info-box p{display:inline-block;font-size:1.8rem;color:#333;vertical-align:middle}
+.board-info-box p .num{color:#035fb6}
+.board-info-box ul{display:inline-block;margin-left:10px;vertical-align:middle}
+.board-info-box li{float:left;padding:0 12px;background:url(../images/bar1.png) no-repeat 100% 50%;font-size:1.6rem;}
+.board-info-box li.on{color:#035fb6}
+.board-info-box li:last-child{background:none}
+.board-info-box li a:hover{text-decoration:underline}
+.board-info-box .btn-write{position:absolute;top:16px;right:0;display:inline-block;height:38px;padding:0 40px 0 65px;background:url(../images/icon_pen.png) no-repeat 15% 50%;background-color:#035fb6;font-size:1.6rem;color:#fff;font-family: 'NanumBarunGothicBold';line-height:2.4}
+.board-info-box .btn-question-write{position:absolute;top:16px;right:0;display:inline-block;height:38px;padding:0 40px 0 65px;background:url(../images/icon_pen.png) no-repeat 15% 50%;background-color:#333;font-size:1.6rem;color:#fff;font-family: 'NanumBarunGothicBold';line-height:2.4}
+
+.board-list{width:940px;border-top:2px solid #333;}
+.board-list th{height:53px;border-bottom:1px solid #b5b5b5;font-size:1.6rem;color:#333;font-family: 'NanumBarunGothicBold';font-weight:normal}
+.board-list td{height:59px;padding: 0 20px;border-bottom:1px solid #e2e2e2;text-align:center;font-size:1.6rem;line-height:1.4;color:#888}
+.board-list .title{font-size:1.8rem;color:#666;text-align:left;text-overflow: ellipsis;overflow: hidden;white-space:nowrap;}
+.board-list .title-reply{color:#f6911b}
+.board-list .board-tag-card{display:inline-block;width:78px;height:26px;background:#035fb6;color:#fff;font-size:1.4rem;line-height:1.9}
+.board-list .board-tag-spread{display:inline-block;width:78px;height:26px;background:#237c29;color:#fff;font-size:1.4rem;line-height:1.9}
+.board-list .board-tag-talk{display:inline-block;width:56px;height:26px;background:#f7f7f7;color:#444;border:1px solid #b7b7b7;font-size:1.4rem;line-height:1.9}
+.board-list a:hover{text-decoration:underline}
+
+.board-view{position:relative;width:940px;border-top:2px solid #333;}
+.board-view th{height:53px;padding: 0 10px;border-bottom:1px solid #b5b5b5;font-size:1.9rem;color:#333;font-family: 'NanumBarunGothicBold';font-weight:normal;text-align:left;}
+.board-view th.title-question{color:#035fb6;font-size:1.6rem;}
+.board-view th img{vertical-align:middle;margin-right:10px;}
+.board-view td{position:relative;height:50px;padding:0 10px;border-bottom:1px solid #e2e2e2;font-size:1.6rem;}
+.board-view td .view-info li{display:inline-block;padding:0 22px;color:#888;background:url(../images/bar1.png) no-repeat 100% 50%}
+.board-view td.line-b{border-bottom:1px solid #c0c0c0}
+.board-view td .view-info li:first-child{padding-left:10px}
+.board-view td .view-info li:last-child{background:none}
+.board-view td .view-info li span{color:#333}
+.board-view td.view-contents{padding:60px;border-bottom:1px solid #c0c0c0}
+.board-view td.view-contents .img-box{display:block;width:100%;margin-bottom:50px;text-align:center}
+.board-view td.view-contents .img-box img{max-width:720px;}
+.board-view td.view-contents p{font-size:1.8rem;white-space:pre-wrap}
+.board-view td.view-contents .p-question{font-size:1.6rem;line-height:2.2;margin-bottom:100px}
+.board-view td.view-contents .question-txt-box1{display:inline-block;padding:2px 10px;margin-bottom:30px;background:#717171;color:#fff;font-size:1.4rem;text-align:center;line-height:1.6}
+.board-view td.view-contents .question-txt-box2{display:inline-block;padding:4px 10px;margin:30px 0;border:1px solid #035fb6;border-radius:4px;color:#035fb6;font-size:1.3rem;}
+.board-view td .view-radio-box li{display:inline-block;margin-right:50px;}
+.board-view td .view-radio-box li input{margin-right:15px;vertical-align:middle}
+.board-view td.view-reply-write{padding:30px;background:#f8f8f8;border:2px solid #e4e4e4;}
+.board-view td.view-reply-view{padding:20px 10px;}
+.board-view td.view-reply-view img{vertical-align:middle}
+.board-view td.view-reply-view .reply-tag{display:inline-block;width:110px;height:30px;margin-right:10px;background:#f6911b;border-radius:15px;color:#fff;font-size:1.8rem;line-height:1.8;text-align:center}
+.board-view td.view-reply-view .reply-info{margin:0 10px;font-size:1.4rem;color:#888;}
+.board-view td.view-reply-view .btn-reply-write2{display:inline-block;width:70px;height:28px;margin-left:10px;border:1px solid #cbcbcb;border-radius:5px;font-size:1.4rem;color:#333;font-family: 'NanumBarunGothicBold';line-height:2;text-align:center}
+.board-view td.view-reply-view p{margin:15px 0 60px 0;font-size:1.8rem;line-height:1.4;white-space:pre-wrap}
+.board-view td.view-reply-view .p-reply-question{margin:20px 10px 10px 10px;font-size:1.4rem;line-height:2;white-space:pre-wrap}
+.board-view td .reply-num{margin-left:30px;}
+.board-view td .reply-title{font-size:1.8rem;color:#333;font-family: 'NanumBarunGothicBold';}
+.board-view td.reply-question{font-size:1.8rem;color:#333;font-family: 'NanumBarunGothicBold';}
+.board-view .btn-scrap{position:absolute;top:14px;right:10px;padding:2px 2px 2px 25px;background:url(../images/icon_board_scrap.png) no-repeat 0 50%;color:#888}
+.board-view .btn-recommand{display:block;width:44px;height:37px;margin:0 auto;margin-top:120px;padding-left:44px;background:url(../images/icon_recommand.png) no-repeat 20% 50%;border:1px solid #b3b3b3;color:#333;line-height:2.4;}
+.board-view .btn-reply-write{display:inline-block;width:72px;height:45px;padding-top:15px;background:#035fb6;color:#fff;text-align:center;vertical-align:middle;font-size:1.3rem;font-family: 'NanumBarunGothicBold';line-height:1.2}
+
+.board-btn-box{position:relative;width:940px;margin-top:18px}
+.board-btn-box a{display:inline-block;width:150px;height:42px;border:1px solid #b3b3b3;font-size:1.6rem;font-family: 'NanumBarunGothicBold';color:#333;line-height:2.8;text-align:center}
+.board-btn-box a img{margin-left:10px}
+.board-btn-box .btn-list{float:left;}
+.board-btn-box .btn-up{float:right;border-right:none}
+.board-btn-box .btn-down{float:right;}
+
+/* 푸터 커뮤니티 메뉴 */
+.fnb-wrap{position:relative;width:100%;height:274px;border-top:1px solid #6d6d6d;}
+.fnb{position:relative;width:1200px;margin: 0 auto}
+.fnb dl{position:relative;float:left;width:220px;margin-top:20px;line-height:2.2}
+.fnb dt{height:32px;margin-bottom:15px;padding-left:5px;border-bottom:1px solid #cfcfcf;font-size:1.4rem;color:#333;}
+.fnb dd{height:24px;padding-left:5px;font-size:1.2rem;color:#888;text-overflow: ellipsis;overflow:hidden;white-space: nowrap;}
+.fnb dd img{margin-right:5px;}
+.btn-fnb-more{position: absolute; top:7px; right: 0;display:inline-block;width:17px;height:17px;background:url(../images/btn_fnb_more.png) no-repeat;overflow:hidden;text-indent:100%;white-space:nowrap;}
+.fnb dl a:hover{text-decoration:underline}
+.mg-r25{margin-right:25px;}
+
+/* 푸터 ///////////////////////////////////////////////////////////////////////////////////////////*/
+.footer-wrap{position:relative;width:100%;height:345px;background:#f6f6f6;border-top:1px solid #e4e4e4}
+.footer{position:relative;width:1200px;height:305px;margin:0 auto;padding-top:40px;background:#f6f6f6;letter-spacing:0.3px}
+.footer .section1{position:relative;height:120px}
+.footer .section2{position:relative;}
+.footer .section1 div{float:left;margin-right:150px;color:#333;font-size:2.8rem}
+.footer .section1 div span{display:block;margin-top:6px;margin-left:2px;font-size:1.2rem;color:#888}
+.footer .section1 h3{font-size:1.5rem;margin-bottom:20px;color:#666;font-weight:normal}
+.footer .section1 ul{position:absolute;top:0;right:0;}
+.footer .section1 li{float:left;margin-left:40px;font-family: 'NanumBarunGothicBold';color:#333;font-size:1.5rem;}
+.footer .section1 li.on{background:#f6911b;color:#fff;padding:2px;}
+.footer .section1 li a:hover{text-decoration:underline ;}
+.footer .section2 p{color:#888}
+.footer .section2 .copyright{margin-top:6px;font-size:1.2rem;}
+.footer .section2 .copyright img{vertical-align:middle}
+.footer .footer-logo{width:300px;height:90px;position:absolute;top:0;right:0;background:url(../images/footer_logo.png) no-repeat 100% 0%}
+
+
+/* 컨텐츠공통 /////////////////////////////////////////////////////////////////////////////////// */
+/* 페이저 이전 다음 */
+.pager-box{position:relative;width:240px;margin-left:30px;line-height:1.6}
+.pager-box .bold{font-family: 'NanumBarunGothicBold';color:#555}
+.bdr-bn{border-bottom:none}
+.topright-btn-box{position:absolute;top:23px;right:30px;font-size:1.2rem;color:#a6a6a6}
+.right-btn-box{position:absolute;top:0;right:0;font-size:1.2rem;color:#a6a6a6}
+.btn-prev{display:inline-block;width:20px;height:18px;background:url(../images/btn_prev.png) no-repeat;overflow:hidden;text-indent:100%;white-space:nowrap;vertical-align:middle;}
+.btn-next{display:inline-block;width:18px;height:18px;background:url(../images/btn_next.png) no-repeat;overflow:hidden;text-indent:100%;white-space:nowrap;vertical-align:middle}
+
+/* 셀렉트 박스 */
+.select-script2{position:relative;display:inline-block; height:34px;line-height:2.6;border:1px solid #cfcfcf; text-transform:uppercase;background-color:#fff;color:#666;vertical-align:middle}
+.select-script2 label{position:absolute; width:85%; color:#666; top:0; left:0; padding:0 8%;}
+.select-script2 label:after{content:''; width:34px; height:34px; position:absolute; top:0; right:0; font-size:.76em; color:#fff; text-align:center;background:url(../images/select_arrow.png) no-repeat 50% 50%;}
+.select-script2 select{width:100%; height:34px; opacity:0; filter:alpha(opacity=0); -ms-filter:alpha(opacity=0)/* IE 8 */;}
+.select-script3{position:relative;display:inline-block; height:47px;line-height:3.5; text-transform:uppercase;background-color:#f7f7f7;border-right:1px solid #e4e4e4;vertical-align:middle}
+.select-script3 label{position:absolute; width:100%; top:0; left:0;padding-left:5px;box-sizing:border-box;}
+.select-script3 label:after{display:inline-block;content:''; width:20px; height:47px; position:absolute; top:0; right:1px;background:url(../images/select_arrow_s.png) no-repeat 50% 50%;background-color:#fff;border-left:1px solid #e4e4e4;}
+.select-script3 select{width:100%; height:47px; opacity:0; filter:alpha(opacity=0); -ms-filter:alpha(opacity=0)/* IE 8 */;}
+.select-script4{position:relative;display:inline-block;width:53px;height:47px;background:#f7f7f7;border:none;border-right:1px solid #e4e4e4;}
+.select-script4 input{height:47px;background:#f7f7f7;border:none;}
+.select-script4 .btn-up{position:absolute;top:0;right:0;display:inline-block;width:20px;height:23px;background:url(../images/select_arrow_s_up.png) no-repeat 50% 50%;background-color:#fff;border-left:1px solid #e4e4e4;}
+.select-script4 .btn-down{position:absolute;top:23px;right:0;display:inline-block;width:20px;height:23px;background:url(../images/select_arrow_s.png) no-repeat 50% 50%;background-color:#fff;border-left:1px solid #e4e4e4;border-top:1px solid #e4e4e4}
+.select-script5{position:relative;display:inline-block; height:37px;line-height:3; text-transform:uppercase;background-color:#f7f7f7;vertical-align:middle}
+.select-script5 label{position:absolute; width:100%; top:0; left:0;padding-left:5px;box-sizing:border-box;}
+.select-script5 label:after{display:inline-block;content:''; width:17px; height:37px; position:absolute; top:0; right:1px;background:url(../images/select_arrow_s.png) no-repeat 50% 50%;background-color:#fff;border-left:1px solid #e4e4e4;}
+.select-script5 select{width:100%; height:37px; opacity:0; filter:alpha(opacity=0); -ms-filter:alpha(opacity=0)/* IE 8 */;}
+
+/* 페이저 */
+.board-pager-box{width:100%;padding-top:30px;font-family: 'NanumBarunGothicBold';text-align:center;font-size:1.2rem;color:#666;line-height:2.9}
+.board-pager-box a{display:inline-block;width:32px;height:32px;margin:0 1px 0 2px;border:1px solid #e4e4e4;vertical-align:middle}
+.board-pager-box a.num-on{border:1px solid #035fb6;color:#035fb6}
+.board-pager-box a.preview{background:url(../images/pager_pre.png) no-repeat 50% 50%;overflow:hidden;text-indent:100%;white-space:nowrap;}
+.board-pager-box a.next{background:url(../images/pager_next.png) no-repeat 50% 50%;overflow:hidden;text-indent:100%;white-space:nowrap;}
+.board-pager-box a.preview-end{background:url(../images/pager_pre_end.png) no-repeat 50% 50%;overflow:hidden;text-indent:100%;white-space:nowrap;}
+.board-pager-box a.next-end{background:url(../images/pager_next_end.png) no-repeat 50% 50%;overflow:hidden;text-indent:100%;white-space:nowrap;}
+
+.board-pager-box-s{width:100%;padding-top:10px;font-family: 'NanumBarunGothicBold';text-align:center;font-size:0.9rem;color:#666;line-height:2.9}
+.board-pager-box-s a{display:inline-block;margin:0 10px 0 10px;vertical-align:middle}
+.board-pager-box-s a.num-on{color:#035fb6}
+.board-pager-box-s a:hover{color:#035fb6}
+
+

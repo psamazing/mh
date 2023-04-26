@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<link rel="stylesheet" href="../css/common.css">
+<link rel="stylesheet" type="text/css" href="../css/main.css"/>
+<link rel="stylesheet" type="text/css" href="../css/footer.css"/>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script src="../js/slick.js"></script>
+<script src="../js/jquery.menu.min.js"></script>
+</head>
+<body>
+<div id="wrap">
+    <header class="header_wrap">
+        <div class="site_menu_wrap">
+            <ul class="header_login">
+                <li onclick="openLoginPop();">로그인</li>
+                <li><a href="<%=path_main%>/mypage/agree.jsp">회원가입</a></li>
+                <li class="cs">
+                    <a href="#" onclick="openLoginPop();">고객센터</a>
+                    <ul class="cs_over">
+                        <li class="cs_title"><a href="#" onclick="openLoginPop();">고객센터</a></li>
+                        <li class="cs_faq"><a href="#" onclick="openLoginPop();">FAQ</a></li>
+                        <li class="cs_guide"><a href="#" onclick="openLoginPop();">이용가이드</a></li>
+                        <li class="customer_number">고객센터<span class="call_number">1588-5120</span></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="header_info_wrap">
+            <h1><a href="">아이메딕</a></h1>
+            <div class="pro-search-wrap">
+                <input type="text" class="header_search">
+                <a href=""><img src="../img/inc/search_imedic.png" class="search_img" alt="검색"></a>
+            </div>
+            <ul class="mypage_icon_wrap">
+                <li class="mypage_wrap">
+                    <a href="#" onclick="openLoginPop();"><img src="../img/main/mypage_up.png" alt="����������"/></a>
+                    <ul class="mypage_over">
+                        <li class="mylist"><a href="#" onclick="openLoginPop();">배송조회</a></li>
+                        <li class="mylist"><a href="#" onclick="openLoginPop();">관심상품</a></li>
+                        <li class="mylist"><a href="#" onclick="openLoginPop();">회원정보변경</a></li>
+                        <li class="mylist"><a href="#" onclick="openLoginPop();">1:1문의</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="../img/main/cart_up.png" alt="장바구니" title="장바구니"/>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <nav class="nav">
+        <ul class="nav_menu">
+            <li class="cate_page_all" onclick="openCategory2();">
+                <span class="opencate2" >
+                    <a href="javascript:void(0);" class="menu_trigger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </a>
+                    <span class="nav_title">상품카테고리</span>
+                </span>    	
+            </li>	
+            <li class="nav_list pro"><a href="#">건강관리실상용제품</a></li> 
+            <li class="nav_list advice"><a href="#">전문가상담실</a></li> 
+            <li class="nav_list online"><a href="#">온라인강의실</a></li> 
+            <li class="nav_list compass"><a href="#">보건교서벙</a></li>
+            <li class="nav_list board"><a href="#">게시판</a></li>    
+            <li class="womango" onclick="doWomanGo();"><span>여성과건강</span></li>             
+        </ul>
+    </nav>
+    <section class="main-section">
+        <div class="main_wrap mwrap">
+            <ul class="main_top_wrap">
+                <li class="cate_wrap">
+    				<ul class="cate_list">
+                        <li class="cate_li default">
+                            <div class="category_wrap">
+                                <div class="nav_sub_menu scrollable" id="nav_sub_menu1">
+                                </div> 
+                            </div>
+                        </li>
+                        <li class="cate_li first_menu">
+                            <a href=""><span>의약품</span></a>
+                            <div class="category_wrap">
+                                <div class="nav_sub_menu scrollable" id="nav_sub_menu1">
+                                </div> 
+                            </div>
+                        </li>
+                        <li class="cate_li">
+                            <a href=""><span>의약외품</span></a>
+                            <div class="category_wrap">
+                                <div class="nav_sub_menu scrollable" id="nav_sub_menu1">
+                                </div> 
+                            </div>
+                        </li>
+                        <li class="cate_li">
+                            <a href=""><span>의료기기</span></a>
+                            <div class="category_wrap">
+                                <div class="nav_sub_menu scrollable" id="nav_sub_menu1">
+                                </div> 
+                            </div>
+                        </li>
+                        <li class="cate_li">
+                            <a href=""><span>교육자료</span></a>
+                            <div class="category_wrap">
+                                <div class="nav_sub_menu scrollable" id="nav_sub_menu1">
+                                </div> 
+                            </div>
+                        </li>
+                        <li class="cate_li">
+                            <a href=""><span>비품</span></a>
+                            <div class="category_wrap">
+                                <div class="nav_sub_menu scrollable" id="nav_sub_menu1">
+                                </div> 
+                            </div>
+                        </li>
+                        <li class="cate_li">
+                            <a href=""><span>시설장비</span></a>
+                            <div class="category_wrap">
+                                <div class="nav_sub_menu scrollable" id="nav_sub_menu1">
+                                </div> 
+                            </div>
+                        </li>
+                        <li class="cate_li">
+                            <a href=""><span>증상 · 상황별분류</span></a>
+                            <div class="category_wrap">
+                                <div class="nav_sub_menu scrollable" id="nav_sub_menu1">
+                                </div> 
+                            </div>
+                        </li>
+                        <li class="cate_li">
+                            <a href=""><span>테마별추천제품</span></a>
+                            <div class="category_wrap">
+                                <div class="nav_sub_menu scrollable" id="nav_sub_menu1">
+                                </div> 
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="m_banner_wrap">
+    				<ul class="main_banner">
+    					<li><a href=""><img src="../img/main/mainbanner_1.jpg"/></a></li>
+    					<li><a href=""><img src="../img/main/mainbanner_1.jpg"/></a></li>
+    					<li><a href=""><img src="../img/main/mainbanner_1.jpg"/></a></li>
+    					<li><a href=""><img src="../img/main/mainbanner_1.jpg"/></a></li>
+    				</ul>
+                </li>
+                <li class="ad_top_wrap">
+                    <div class="advice_wrap">
+                        <div class="list_title"><span class="advice_title">전문가상담실</span><span class="plus_icon"><a href=""><img src="../img/main/plus_icon.png" alt="������"/></a></span></div>
+                        <ul class="adv_list_wrap">
+                            <li class="list_content"><span class="advice_proceed wait">대기</span><span class="advice_con">약품 소분 관련 문의드려요.</span></li>
+                            <li class="list_content"><span class="advice_proceed finish">완료</span><span class="advice_con">상처 치료 문의</span></li>
+                            <li class="list_content"><span class="advice_proceed finish">완료</span><span class="advice_con">눈 다래끼</span></li>
+                            <li class="list_content"><span class="advice_proceed finish">완료</span><span class="advice_con">파스사용</span></li>
+                            <li class="list_content"><span class="advice_proceed finish">완료</span><span class="advice_con">동상에 적용 가능한 연고</span></li>
+                            <li class="list_content"><span class="advice_proceed finish">완료</span><span class="advice_con">복통장염</span></li>
+                        </ul>
+                        <div class="doadvicewrite">고민하지말고 물어보세요~<span onclick="doAdvice();">상담하기</span></div>
+                    </div>
+                    <ul class="quick_menu_wrap">
+                        <li class="qmenu list1"><a href="">1:1문의</a></li>
+                        <li class="qmenu list2"><a href="">원격지원</a></li>
+                        <li class="qmenu list3"><a href="">고객센터</a></li>
+                        <li class="qmenu list4"><a href="">셀프교환</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!--추천제품-->
+    	<div class="recom_pro_wrap">
+    		<span class="recom_pro_title">추천제품</span>
+    		<ul class="recom_pro_list mwrap">
+    			<li>
+    				<a href="">
+    					<span class="pro_img_wrap"><img src="../img/main/newproduct_banner_1.jpg" alt="" class="new_pro_img"/></span>
+    					<span class="pro_title">써버쿨액</span>
+    				</a>
+    			</li>
+    			<li>
+    				<a href="">
+    					<span class="pro_img_wrap"><img src="../img/main/newproduct_banner_2.jpg" alt="" class="new_pro_img"/></span>
+    					<span class="pro_title">대한위재 덴탈마스크(의약외품)</span>
+    				</a>
+    			</li>
+    			<li>
+    				<a href="">
+    					<span class="pro_img_wrap"><img src="../img/main/newproduct_banner_3.jpg" alt="" class="new_pro_img"/></span>
+    					<span class="pro_title">써버쿨액</span>
+    				</a>
+    			</li>
+    			<li>
+    				<a href="">
+    					<span class="pro_img_wrap"><img src="../img/main/newproduct_banner_4.jpg" alt="" class="new_pro_img"/></span>
+    					<span class="pro_title">대한위재 덴탈마스크(의약외품)</span>
+    				</a>
+    			</li>
+    			<li>
+    				<a href="">
+    					<span class="pro_img_wrap"><img src="../img/main/newproduct_banner_1.jpg" alt="" class="new_pro_img"/></span>
+    					<span class="pro_title">써버쿨액</span>
+    				</a>
+    			</li>
+    			<li>
+    				<a href="">
+    					<span class="pro_img_wrap"><img src="../img/main/newproduct_banner_2.jpg" alt="" class="new_pro_img"/></span>
+    					<span class="pro_title">대한위재 덴탈마스크(의약외품)</span>
+    				</a>
+    			</li>
+    			<li>
+    				<a href="">
+    					<span class="pro_img_wrap"><img src="../img/main/newproduct_banner_3.jpg" alt="" class="new_pro_img"/></span>
+    					<span class="pro_title">써버쿨액</span>
+    				</a>
+    			</li>
+    			<li>
+    				<a href="">
+    					<span class="pro_img_wrap"><img src="../img/main/newproduct_banner_4.jpg" alt="" class="new_pro_img"/></span>
+    					<span class="pro_title">대한위재 덴탈마스크(의약외품)</span>
+    				</a>
+    			</li>
+    			<li>
+    				<a href="">
+    					<span class="pro_img_wrap"><img src="../img/main/newproduct_banner_1.jpg" alt="" class="new_pro_img"/></span>
+    					<span class="pro_title">써버쿨액</span>
+    				</a>
+    			</li>
+    			<li>
+    				<a href="">
+    					<span class="pro_img_wrap"><img src="../img/main/newproduct_banner_2.jpg" alt="" class="new_pro_img"/></span>
+    					<span class="pro_title">대한위재 덴탈마스크(의약외품)</span>
+    				</a>
+    			</li>
+    			<li>
+    				<a href="">
+    					<span class="pro_img_wrap"><img src="../img/main/newproduct_banner_3.jpg" alt="" class="new_pro_img"/></span>
+    					<span class="pro_title">써버쿨액</span>
+
+    				</a>
+    			</li>
+    			<li>
+    				<a href="">
+    					<span class="pro_img_wrap"><img src="../img/main/newproduct_banner_4.jpg" alt="" class="new_pro_img"/></span>
+    					<span class="pro_title">대한위재 덴탈마스크(의약외품)</span>
+    					
+    				</a>
+    			</li>
+    		</ul>
+        </div>
+        <!--콘텐츠-->
+    	<div class="board_wrap mwrap">
+    		<ul class="board_list_wrap">
+    			<li>
+    				<span class="board_list_title">건강칼럼</span>
+    				<span class="plus_icon"><a href=""><img src="../img/main/plus_icon.png" alt=""/></a></span>
+    				<a href=""><img src="../img/main/column_test.jpg"/></a>
+    			</li>
+    			<li>
+    				<span class="board_list_title">자료실</span>
+    				<span class="plus_icon"><a href=""><img src="../img/main/plus_icon.png" alt=""/></a></span>
+    				<ul>
+    					<li class="main_content"><a href=""><img src="../img/main/corona_test.jpg"/><span class="main_con_title">test</span></a></li>
+    					<li class="sub_content_li first">
+    						<a href="">
+	    						<span class="subcon img"><img src="../img/main/corona_test1.jpg"/></span>
+	    						<span class="subcon info"><sub class="sub">test</sub><sub class="subcon">test</sub></span>
+    						</a>
+    					</li>
+    					<li class="sub_content_li">
+    						<a href="">
+	    						<span class="subcon img"><img src="../img/main/corona_test2.jpg"/></span>
+	    						<span class="subcon info"><sub class="sub">test</sub><sub class="subcon">test</sub></span>
+    						</a>
+    					</li>
+    				</ul>
+    			</li>
+    			<li>
+    				<span class="board_list_title">제품집중탐구</span>
+    				<span class="plus_icon"><a href=""><img src="../img/main/plus_icon.png" alt="������"/></a></span>
+    				<ul>
+    					<li class="main_content"><a href=""><img src="../img/main/research_test.png"/><span class="main_con_title">test</span></a></li>
+    					<li class="sub_content_li first">
+    						<a href="">
+	    						<span class="subcon img"><img src="../img/main/corona_test1.jpg"/></span>
+	    						<span class="subcon info"><sub class="sub">test</sub><sub class="subcon">test</sub></span>
+    						</a>
+    					</li>
+    					<li class="sub_content_li">
+    						<a href="">
+	    						<span class="subcon img"><img src="../img/main/corona_test2.jpg"/></span>
+	    						<span class="subcon info"><sub class="sub">test</sub><sub class="subcon">test</sub></span>
+    						</a>
+    					</li>
+    				</ul>
+    			</li>
+    		</ul>
+        </div>
+        <!--신제품-->
+    	<div class="newpro_wrap mwrap">
+    		<span class="new_pro_title">신제품</span>
+    		<div class="board_box">
+    		<span class="plus_icon"><a href=""><img src="../img/main/plus_icon.png" alt=""/></a></span>
+    		<ul id="new_pro_list">
+    			<li>
+    				<div id="content" class="roll_content slide" data-title="의약품">
+    					<ul>
+    						<li><span class="imgwrap"><img src="../img/main/newproduct_banner_1.jpg" alt=""/></span><span class="pro_title">케프란점안액(알러콘동일)</span></li>
+    						<li><span class="imgwrap"><img src="../img/main/newproduct_banner_2.jpg" alt=""/></span><span class="pro_title">케프란점안액(알러콘동일)</span></li>
+    						<li><span class="imgwrap"><img src="../img/main/newproduct_banner_3.jpg" alt=""/></span><span class="pro_title">케프란점안액(알러콘동일)</span></li>
+    						<li><span class="imgwrap"><img src="../img/main/newproduct_banner_4.jpg" alt=""/></span><span class="pro_title">케프란점안액(알러콘동일)</span></li>
+    						<li><span class="imgwrap"><img src="../img/main/newproduct_banner_1.jpg" alt=""/></span><span class="pro_title">케프란점안액(알러콘동일)</span></li>
+    						<li><span class="imgwrap"><img src="../img/main/newproduct_banner_2.jpg" alt=""/></span><span class="pro_title">케프란점안액(알러콘동일)</span></li>
+    					</ul>
+    				</div>
+    			</li>
+    			<li>
+    				<div id="content" class="roll_content slide" data-title="의약외품">
+    					<ul>
+    						<li><span class="imgwrap"><img src="../img/main/newproduct_banner_1.jpg" alt=""/></span><span class="pro_title">마스크보관용주머니</span></li>
+    						<li><span class="imgwrap"><img src="../img/main/newproduct_banner_2.jpg" alt=""/></span><span class="pro_title">마스크보관용주머니</span></li>
+    						<li><span class="imgwrap"><img src="../img/main/newproduct_banner_3.jpg" alt=""/></span><span class="pro_title">마스크보관용주머니</span></li>
+    						<li><span class="imgwrap"><img src="../img/main/newproduct_banner_4.jpg" alt=""/></span><span class="pro_title">마스크보관용주머니</span></li>
+    						<li><span class="imgwrap"><img src="../img/main/newproduct_banner_1.jpg" alt=""/></span><span class="pro_title">마스크보관용주머니</span></li>
+    						<li><span class="imgwrap"><img src="../img/main/newproduct_banner_2.jpg" alt=""/></span><span class="pro_title">마스크보관용주머니</span></li>
+    					</ul>
+    				</div>
+    			</li>
+    			<li>
+    				<div id="content" class="roll_content slide" data-title="의료기">
+    					<ul>
+    						<li><span class="imgwrap"><img src="../img/main/newproduct_banner_1.jpg" alt=""/></span><span class="pro_title">의료용산소공급기세트(라파</span></li>
+    						<li><span class="imgwrap"><img src="../img/main/newproduct_banner_2.jpg" alt=""/></span><span class="pro_title">의료용산소공급기세트(라파</span></li>
+    						<li><span class="imgwrap"><img src="../img/main/newproduct_banner_3.jpg" alt=""/></span><span class="pro_title">의료용산소공급기세트(라파</span></li>
+    						<li><span class="imgwrap"><img src="../img/main/newproduct_banner_4.jpg" alt=""/></span><span class="pro_title">의료용산소공급기세트(라파</span></li>
+    						<li><span class="imgwrap"><img src="../img/main/newproduct_banner_1.jpg" alt=""/></span><span class="pro_title">의료용산소공급기세트(라파</span></li>
+    						<li><span class="imgwrap"><img src="../img/main/newproduct_banner_2.jpg" alt=""/></span><span class="pro_title">의료용산소공급기세트(라파</span></li>
+    					</ul>
+    				</div>
+    			</li>
+    			<li>
+    				<div id="content" class="roll_content slide" data-title="교육자료">
+    					<ul>
+    						<li><span class="imgwrap"><img src="../img/main/newproduct_banner_1.jpg" alt=""/></span><span class="pro_title">건강배너(감염병-코로나Ⅶ</span></li>
+    						<li><span class="imgwrap"><img src="../img/main/newproduct_banner_2.jpg" alt=""/></span><span class="pro_title">건강배너(감염병-코로나Ⅶ</span></li>
+    						<li><span class="imgwrap"><img src="../img/main/newproduct_banner_3.jpg" alt=""/></span><span class="pro_title">건강배너(감염병-코로나Ⅶ</span></li>
+    						<li><span class="imgwrap"><img src="../img/main/newproduct_banner_4.jpg" alt=""/></span><span class="pro_title">건강배너(감염병-코로나Ⅶ</span></li>
+    						<li><span class="imgwrap"><img src="../img/main/newproduct_banner_1.jpg" alt=""/></span><span class="pro_title">건강배너(감염병-코로나Ⅶ</span></li>
+    						<li><span class="imgwrap"><img src="../img/main/newproduct_banner_2.jpg" alt=""/></span><span class="pro_title">건강배너(감염병-코로나Ⅶ</span></li>
+    					</ul>
+    				</div>
+    			</li>
+    			<li>
+    				<div id="content" class="roll_content slide" data-title="비품">
+    					<ul>
+    						<li><span class="imgwrap"><img src="../img/main/newproduct_banner_1.jpg" alt=""/></span><span class="pro_title">바이러스 살균기(병원용)</span></li>
+    						<li><span class="imgwrap"><img src="../img/main/newproduct_banner_2.jpg" alt=""/></span><span class="pro_title">바이러스 살균기(병원용)</span></li>
+    						<li><span class="imgwrap"><img src="../img/main/newproduct_banner_3.jpg" alt=""/></span><span class="pro_title">바이러스 살균기(병원용)</span></li>
+    						<li><span class="imgwrap"><img src="../img/main/newproduct_banner_4.jpg" alt=""/></span><span class="pro_title">바이러스 살균기(병원용)</span></li>
+    						<li><span class="imgwrap"><img src="../img/main/newproduct_banner_1.jpg" alt=""/></span><span class="pro_title">바이러스 살균기(병원용)</span></li>
+    						<li><span class="imgwrap"><img src="../img/main/newproduct_banner_2.jpg" alt=""/></span><span class="pro_title">바이러스 살균기(병원용)</span></li>
+    					</ul>
+    				</div>
+    			</li>
+    			<li>
+    				<div id="content" class="roll_content slide" data-title="시설장비">
+    					<ul>
+    						<li><span class="imgwrap"><img src="../img/main/newproduct_banner_1.jpg" alt=""/></span><span class="pro_title">얼티메이트 에이드 구급가방</span></li>
+    						<li><span class="imgwrap"><img src="../img/main/newproduct_banner_2.jpg" alt=""/></span><span class="pro_title">얼티메이트 에이드 구급가방</span></li>
+    						<li><span class="imgwrap"><img src="../img/main/newproduct_banner_3.jpg" alt=""/></span><span class="pro_title">얼티메이트 에이드 구급가방</span></li>
+    						<li><span class="imgwrap"><img src="../img/main/newproduct_banner_4.jpg" alt=""/></span><span class="pro_title">얼티메이트 에이드 구급가방</span></li>
+    						<li><span class="imgwrap"><img src="../img/main/newproduct_banner_1.jpg" alt=""/></span><span class="pro_title">얼티메이트 에이드 구급가방</span></li>
+    						<li><span class="imgwrap"><img src="../img/main/newproduct_banner_2.jpg" alt=""/></span><span class="pro_title">얼티메이트 에이드 구급가방</span></li>
+    					</ul>
+    				</div>
+    			</li>
+    		</ul>
+    		</div>
+        </div>
+        <!--여성과건강-->
+    	<div class="woman_wrap mwrap">
+    		<span class="title">여성과건강<span class="plus_icon"><a href="javascript:void(0);" onclick="doWomanGo();">여성과건강바로가기</a></span></span>
+    		<div class="woman_banner"><img src="../img/main/woman_m_banner.png" alt="�������ǰ�" title="�������ǰ�"/></div>
+    		<ul class="woman_pro_list">
+    			<li><a href="#"><span class="w_img_wrap"><img src="../img/main/danavitaD.jpg"/></span><span class="w_pro_name">${pro_name}</span></a></li>
+    			<li><a href="#"><span class="w_img_wrap"><img src="../img/main/danavitaD.jpg"/></span><span class="w_pro_name">${pro_name}</span></a></li>
+    			<li><a href="#"><span class="w_img_wrap"><img src="../img/main/danavitaD.jpg"/></span><span class="w_pro_name">${pro_name}</span></a></li>
+    		</ul>
+        </div>
+        <!--동영상제품사용법-->
+        <div class="etc_wrap mwrap">
+    		<ul>
+    			<li class="video_use_wrap">
+    				<span class="title">동영상제품사용법<span class="plus_icon"><a href=""><img src="../img/main/plus_icon.png" alt="������"/></a></span></span>
+    				<ul>
+    					<li onclick="doDetail();">
+	    					<span class="img-box"><img src="../img/main/move_etc_autospray.png" alt=""/></span>
+	    					<span class="blind_box"><span class="btn-play"></span></span>
+	    					<span class="research_video_title">코반,코프레스,페하하프트 차이점</span>
+    					</li>
+    					<li onclick="doDetail();">
+    						<span class="img-box"><img src="../img/main/move_etc_himom.png" alt=""/></span>
+    						<span class="blind_box"><span class="btn-play"></span></span>
+	    					<span class="research_video_title">일반 아이스팩과 얼지 않는 아이스팩의 차이점</span>	
+    					</li>
+    					<li onclick="doDetail();">
+    						<span class="img-box"><img src="../img/main/move_etc_icepack.png" alt=""/></span>
+    						<span class="blind_box"><span class="btn-play"></span></span>
+	    					<span class="research_video_title">지테크 자동손소독기 사용법</span>
+    					</li>
+    				</ul>
+    			</li>
+    			<li class="theme_recom_wrap">
+    				<span class="title">테마별추천제품<span class="plus_icon"><a href=""><img src="../img/main/plus_icon.png" alt=""/></a></span></span>
+    				<ul>
+    					<li><img src="../img/main/i_m_change.jpg" alt=""/></li>
+    					<li><img src="../img/main/i_m_cpr.jpg" alt=""/></li>
+    					<li><img src="../img/main/i_m_effect.jpg" alt=""/></li>
+    				</ul>
+    			</li>
+    		</ul>
+		</div>
+		<div id="bottom_category">
+			<ul class="slick-dots" role="tablist" style="display: block;"><li class="" role="presentation"><div class="pager_contents" id="방역용품" data-view-code="21300">방역용품</div></li><li role="presentation"><div class="pager_contents" id="화상관리" data-view-code="10704">화상관리</div></li><li role="presentation" class="slick-active"><div class="pager_contents" id="상처처치" data-view-code="10702">상처처치</div></li><li role="presentation"><div class="pager_contents" id="피로회복·숙취" data-view-code="11800">피로회복·숙취</div></li><li role="presentation"><div class="pager_contents" id="근육통·관절통" data-view-code="10600">근육통·관절통</div></li></ul>
+			<div class="cate_line">
+				<span class="plus_icon"><a href="javascript:void(0);" class="bottom_more"><img src="../img/main/plus_icon.png" alt="더보기"></a></span>	
+				<div class="cate_pro_list">
+				<ul class="pro_list_wrap">
+					<li>
+						<a href="javascript:void(0);" class="bottom-pro-img" data-class-code="21300" data-idx="32160" data-pro-idx="30670" data-delivery-type="1" tabindex="-1">
+						<span class="imgwrap"><img src="../img/main/baroseor1_20190524.jpg" alt="위생비닐가운(일회용)" title="위생비닐가운(일회용)"></span>
+						<span>위생비닐가운(일회용)</span>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:void(0);" class="bottom-pro-img" data-class-code="21300" data-idx="32160" data-pro-idx="30634" data-delivery-type="1" tabindex="-1">
+						<span class="imgwrap"><img src="../img/main/bearoban_l1_20200328.jpg" alt="하이가드A 비말차단마스크(3중평판형)" title="하이가드A 비말차단마스크(3중평판형)"></span>
+						<span>하이가드A 비말차단마스크(3중평판형)</span>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:void(0);" class="bottom-pro-img" data-class-code="21300" data-idx="32160" data-pro-idx="30519" data-delivery-type="1" tabindex="-1">
+						<span class="imgwrap"><img src="../img/main/baroseor1_20190524.jpg" alt="대한위재 덴탈마스크(의약외품)" title="대한위재 덴탈마스크(의약외품)"></span>
+						<span>대한위재 덴탈마스크(의약외품)</span>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:void(0);" class="bottom-pro-img" data-class-code="21300" data-idx="32160" data-pro-idx="30454" data-delivery-type="1" tabindex="-1">
+						<span class="imgwrap"><img src="../img/main/z_baspo3_20190710.jpg" alt="한스 덴탈마스크(의약외품 식약처허가)" title="한스 덴탈마스크(의약외품 식약처허가)"></span>
+						<span>한스 덴탈마스크(의약외품 식약처허가)</span>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:void(0);" class="bottom-pro-img" data-class-code="21300" data-idx="32160" data-pro-idx="30452" data-delivery-type="1" tabindex="-1">
+						<span class="imgwrap"><img src="../img/main/z_biafine_main_view1_20180228.jpg" alt="하이가드A 황사방역용마스크KF94" title="하이가드A 황사방역용마스크KF94"></span>
+						<span>하이가드A 황사방역용마스크KF94</span>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:void(0);" class="bottom-pro-img" data-class-code="21300" data-idx="32160" data-pro-idx="30425" data-delivery-type="1" tabindex="-1">
+						<span class="imgwrap"><img src="../img/main/repigel12gr1_20190628.jpg" alt="크린가드비말차단수프림에어마스크(4중 입체형)" title="크린가드비말차단수프림에어마스크(4중 입체형)"></span>
+						<span>크린가드비말차단수프림에어마스크(4중 입체</span>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:void(0);" class="bottom-pro-img" data-class-code="21300" data-idx="32160" data-pro-idx="30417" data-delivery-type="1" tabindex="-1">
+						<span class="imgwrap"><img src="../img/main/husidinpocket_l1_20200720.jpg" alt="크린가드소프트비말차단마스크(3중 평판형)" title="크린가드소프트비말차단마스크(3중 평판형)"></span>
+						<span>크린가드소프트비말차단마스크(3중 평판형)</span>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:void(0);" class="bottom-pro-img" data-class-code="21300" data-idx="32160" data-pro-idx="30390" data-delivery-type="1" tabindex="-1">
+						<span class="imgwrap"><img src="../img/main/repigel12gr1_20190628.jpg" alt="대한위재 덴탈마스크(의약외품)" title="대한위재 덴탈마스크(의약외품)"></span>
+						<span>대한위재 덴탈마스크(의약외품)</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+    </section>
+</div>
+<!--푸터-->
+<div class="goTop">
+	<a href="#"><img src="../img/inc/gotop.png" alt="" /> </a>
+</div>
+<div class="footer-wrap">
+    <footer class="footer">
+        <div class="section">
+             <ul class="about_list_wrap">
+                <li><a href="<%=path%>/etc/imedic_about.jsp">이메딕소개</a></li>
+                <li><a href="<%=path%>/etc/imedic_member_use.jsp">이용약관</a></li>
+                <li class="on"><a href="<%=path%>/etc/imedic_privacy_policy.jsp">개인정보취급방법</a></li>
+                <li><a href="http://as82.kr/emedic" target="_blank">원격지원</a></li>
+                <li><a href="<%=path%>/mypage/imedicEventList.action?event_chk=1&page_cate=6">이벤트</a></li>
+                <li><a href="#" onclick="doOpenF();return false">오류신고</a></li>
+            </ul>
+        </div>
+        <div class="section1">
+            <ul class="intro_list_wrap">
+            <li>
+                <p class="footer-logo"></p>
+                <p class="footinfo2">
+                    <!--UCERT Certificate Mark-->
+                    <img src="../img/inc/ssl.png"  align="top" border="0" style="cursor:pointer" onclick="viewsealinfo()" title="SSL������ũ" alt="SSL������ũ"/>
+                    <!--UCERT Certificate Mark-->
+                    <!--KISA Certificate Mark-->
+                    <img src="../img/inc/kisa.png" align="top" border="0" style="cursor:pointer;" onclick="onopen();" title="KISA������ũ" alt="KISA������ũ"/>
+                    <!--KISA Certificate Mark-->
+                </p>
+            </li>
+            <li class="company_info">
+            <h2>(주)이메딕팜넷</h2>
+                <p>대표 : 이영  |  개인정보관리자 : 이영 | 의약품도매허가번호 : 제175호<br> 통신판매업번호 : 제5144호 | 사업자등록번호 : 215-86-91451 <br> 서울특별시 송파구 삼전로 12길 9 송영빌딩 2층(삼전동) </p>
+                <p class="copyright">2019 Copyright <img src="../img/inc/copyright_c.png" alt="c" />  emedic. All right reserved.</p>
+            </li>
+            <li class="cs_center"><h3><a href="#">고객센터</a></h3> 1588-5120 <span>Fax : 02-511-5193</span></li>
+            <li class="credit_info"><h3>국민은행</h3> 100-022-519305<span>신한은행 (주)이메딕팜넷</span></li>
+            </ul>
+        </div> 
+    </footer>
+</div>
+</body>
+<script>
+	$(function(){
+	slideMainBanner();
+	slideNewPro();
+	slideMainBoard();
+	//slideCateBoard();
+	slideThemeRecom();
+	//mouseHover();
+	
+});
+
+/**
+ * @description main slider
+ */
+ function slideMainBanner(){
+	
+	$('.main_banner').slick({
+		width:893,
+		slidesToShow:1,
+		slidesToScroll:1,
+		autoplay:false,
+		autoplaySpeed:8000,
+		arrows:true,
+		pauseonHover:true,
+		dots: true
+	});
+	
+	 //main arrow btn 
+	 $('.main_banner').mouseover(function(){
+		$(".main_banner .slick-next").addClass("on");
+		$(".main_banner .slick-prev").addClass("on");
+	 }).mouseout(function(){
+		$(".main_banner .slick-next").removeClass("on");
+		$(".main_banner .slick-prev").removeClass("on");
+	 });
+}
+
+/**
+ * @description new pro slider
+ *  */
+function slideNewPro(){
+	
+	$('.recom_pro_list').slick({
+		slidesToShow:4,
+		slidesToScroll:4,
+		autoplay:true,
+		autoplaySpeed:8000,
+		arrows:true,
+		pauseonHover:true,
+		dots: false
+	});
+}
+
+/**
+ * @description slider
+ */
+function slideMainBoard(){
+	var pager_contents = ["의약품","의약외품","의료기","교육자료","비품","시설장비"],
+		pager_length = pager_contents.length, 
+		board_rand = Math.floor(Math.random() * pager_length);
+	
+	$('#new_pro_list').slick({
+        width:600,
+        height:360,
+        fade:true,
+	    fadeSpeed:1000,
+	    cssEase: 'linear',
+	    autoplay:true,
+	    autoplaySpeed:8000,
+	    arrows:false,
+	    pauseonHover:true,
+	    dots: true,
+	    customPaging : function(slider, i) {
+	    	 var name = pager_contents[i];
+	         return '<div class="pager_contents" id="pagercon'+(i+1)+'">' + name + "</div>";
+	    }
+	});
+	$('#new_pro_list').slick('slickGoTo', board_rand);
+}
+
+/**
+ * @description theme slider
+ */
+ function slideThemeRecom(){
+	
+	$('.theme_recom_wrap > ul').slick({
+		width:582,
+		fade:false,
+		fadeSpeed:1000,
+		autoplay:true,
+		autoplaySpeed:6000,
+		arrows:true,
+		pauseonHover:true,
+		dots: false
+	});
+}
+
+</script>
+</html>

@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8" />
+	<title>이메딕</title>
+    <link rel="stylesheet" href="css/health_board.css" />
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script> 
+    <script type="text/javascript">
+        $(document).ready(function(){
+
+            var select = $('.select-script2 select');
+            select.change(function(){
+                var select_name = $(this).children('option:selected').text();
+                $(this).siblings("label").text(select_name);
+            });
+            $('.sub-nav-menu2 li').hover(
+            function() {
+                $('.sub_category_tchroom_view').stop().slideDown(200);
+            },
+                function() {
+                $('.sub_category_tchroom_view').stop().slideUp(200);
+            }
+            );
+
+        });
+    </script>
+</head>
+<body>
+<div class="wrapper">
+    <header class="header-wrap">
+        <div class="sub-h1"><a href="">보건교사방 <span>온라인강의실</span></a></div>
+    </header>
+    <div class="nav-wrap-study">
+    	<div class="nav-bg"></div>
+    	<nav class="nav-study">
+            <div class="sub-nav-menu2" >
+                <ul>
+                <li class="webtoon"><a href="">웹툰</a></li>
+                <li><a href="">건강정보</a></li> 
+                <li><a href="">세상사</a></li> 
+                <li><a href="">전문가상담실</a></li> 
+                <li><a href="">보건자료실</a></li>
+                <li><a href="">이메딕에 바란다</a></li>
+                <li><a href="">쌤통</a></li>
+                </ul>
+            
+                <div class="sub-category-wrap">
+                    <div class="sub_category_tchroom_view">
+                    <ul class="webtoon">
+                    <li class="webtoon"></li>
+                    <li class="webtoon"><a href="">웹툰</a></li>
+                    <li class="webtoon"></li> 
+                    <li class="webtoon"></li> 
+                    <li class="webtoon"></li> 
+                    </ul>
+                    <ul class="">
+                    <li></li>
+                    <li><a href="">건강컬럼</a></li>
+                    <li><a href="">건강나침반</a></li> 
+                    <li><a href="">질병관리본부소식</a></li> 
+                    <li></li> 
+                    </ul>
+                    <ul class="">
+                    <li></li>
+                    <li><a href="">홈쿡&amp;플레이팅</a></li>
+                    <li><a href="">홈트&amp;다이어리</a></li> 
+                    <li><a href="">책</a></li> 
+                    <li></li> 
+                    </ul>
+                    <ul class="">
+                    <li></li>
+                    <li><a href="">실시간 상담실</a></li>
+                    <li></li> 
+                    <li></li> 
+                    <li></li> 
+                    </ul>
+                    <ul class="">
+                    <li></li>
+                    <li><a href="">보건자료실</a></li>
+                    <li></li> 
+                    <li></li> 
+                    <li></li> 
+                    </ul>
+                    <ul class="">
+                    <li></li>
+                    <li><a href="">이메딕에 바란다</a></li>
+                    <li></li> 
+                    <li></li> 
+                    <li></li> 
+                    </ul>
+                    <ul>
+                    <li></li>
+                    <li class="bdr-no"><a href="">보건실희노애락</a></li>
+                    <li class="bdr-no"><a href="">나만의노하우</a></li> 
+                    <li class="bdr-no"><a href="">궁금타</a></li> 
+                    <li class="bdr-no"></li> 
+                    </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="sub-gossamtong-wrap">
+            	<span class="title"><a href="">쌤통 바로가기</a></span>
+            </div>
+        </nav>
+    </div>
+	<section class="sub-section">
+        <div class="lnb-wrap">	
+            <div class="ssam-profile-box"><img src="images/ssam_profile_photo.png"/></div>
+            <ul class="lnb-menu">
+            <li><a href="">보건실 희로애락</a></li> 
+            <li><a href="">나만의 노하우</a></li> 
+            <li class="on"><a href="">궁금타</a></li> 
+            </ul>
+        </div>
+        <div class="sub-contents-wrap">
+        	<h3>궁금타<p class="2line">다른 보건 선생님은 어떻게 생각하고 계실까? 궁금하지 않으세요?<br>
+            상처치료, 응급처치, 제품사용, 보건업무관련 등 직접 설문을 작성하여 이메딕에 가입하신 다른 보건선생님들께 물어보세요.</p></h3>
+            <table class="board-view">
+                <tr>
+                    <th class="title-question"><img src="images/qna_icon_q_on2.png" />보건실에서 이불세탁은 어디에 맡기시나요?</th>
+                </tr>
+                <tr>
+                <td>
+                    <ul class="view-info"><li>작성자 <span>서주연</span></li><li>작성일 <span>2018-03-26</span></li><li>참여 <span>33</span></li></ul>
+                </td>
+                </tr>
+                <tr>
+                    <td class="view-contents">
+                    <span class="question-txt-box1">추가설명</span>
+                    <p class="p-question">주변 세탁소에 전화해보니 학교나 병원 이불은 세탁할 수 없다고 하던데요~
+                    그러면 어디에 맡겨서 세탁하는 것인가요? ㅠㅠ
+                    그리고 세탁을 하기 어려울 때는 소독이나 청결제? 같은 것을 뿌리시나요? </p>
+                    <span class="question-txt-box2">서술형 설문입니다. 하단 나도 한마디로 참여해 주세요</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td><span class="reply-title">나도 한마디</span> <span class="reply-num">총 <span class="txt-blue txt-b">24</span>개</span></td>
+                </tr>
+                <tr>
+                    <td class="view-reply-write">
+                    <textarea name="" cols="" rows="" style="width:800px;height:60px"></textarea><a href="" class="btn-reply-write">댓글<br>등록</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td  class="view-reply-view ">
+                    <span class="reply-info txt-b">커피향</span><img src="images/bar1.png" /><span class="reply-info">2018-03-16</span><a href="#" class="btn-reply-write2">답글달기</a>
+                    <p class="p-reply-question">빨래방을 알게 되었는데 가격이 참 착합니다. 이불+패드+베개세트가 13000원</p>
+                </td>
+                </tr>
+                <tr>
+                    <td  class="view-reply-view">
+                    <span class="reply-info txt-b">커피향</span><img src="images/bar1.png" /><span class="reply-info">2018-03-16</span><a href="#" class="btn-reply-write2">답글달기</a>
+                    <p class="p-reply-question">세탁소에서 수거하고 세탁해 오는데 이번에 마찰이 있어서 다른 곳으로 옮기고 싶어서 알아보는데 많지가 않습니다. 패드는 직접 
+                    집에서 세탁했고, 머리에 대는 일회용 덮개를 사용하며 알코올로 학생이 쓰고난 이불에 뿌립니다. 세탁소 빨리 알아봐야하는데...ㅜㅜ </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td  class="view-reply-view">
+                    <span class="reply-info txt-b">커피향</span><img src="images/bar1.png" /><span class="reply-info">2018-03-16</span><a href="#" class="btn-reply-write2">답글달기</a>
+                    <p class="p-reply-question">저도 학교 근처 세탁소에 맡겼었는데 요즘은 빨래방에 맡깁니다. 가지러 오시고 비용은 좀 더 저렴한것 같습니다. </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td  class="view-reply-view line-b">
+                    <span class="reply-info txt-b">커피향</span><img src="images/bar1.png" /><span class="reply-info">2018-03-16</span><a href="#" class="btn-reply-write2">답글달기</a>
+                    <p class="p-reply-question">저도 동네 세탁소에서 학교 개교 이래 계속 한곳만 이용합니다. 학교나 병원이불 못받게 되어있는게 아니라 안받는거 같은데요~ 
+                    혹시나 세탁중에 뭔 감염이라도 될까 일부러 그리 말하는게 아닐까 싶어요~ </p>
+                    </td>
+                </tr>
+            </table>
+            <div class="board-btn-box">
+            <a href="#" class="btn-list">목록<img src="images/icon_btn_list.png" /></a><a href="#" class="btn-down">아랫글<img src="images/icon_btn_down.png" /></a><a href="#" class="btn-up">윗글<img src="images/icon_btn_up.png" /></a>
+            </div>
+        </div>
+	</section>
+    <div class="footer-wrap">
+    	<footer class="footer">
+        	<div class="section1">
+                <div><h3>고객센터</h3> 1588-5120 <span>fax : 02-511 - 5193</span></div>
+                <div><h3>계좌번호</h3> 100-022-519305      <span>신한은행 (주)이메딕팜넷</span></div>
+                <ul>
+                <li><a href="">이메딕소개</a></li>
+                <li><a href="">이용약관</a></li>
+                <li class="on"><a href="">개인정보취급방침</a></li>
+                <li><a href="">원격지원</a></li>
+                </ul>
+            </div>
+            <div class="section2">
+                <p>대표 : 이영  |  개인정보관리자 : 이영<br/>
+                의약품도매허가번호 : 제175호 | 통신판매업번호 : 제5144호  |  사업자등록번호 : 215-86-91451<br/>
+                서울특별시 송파구 삼천로 112길 9 송영빌딩 2층  |  email : webmaster@emedic.co.kr</p>
+                <div class="copyright">Copyright <img src="images/copyright_c.png" alt="c" />  eMedic. All right reserved.</div>
+                <div class="footer-logo"></div>
+            </div>        
+        
+        </footer>
+    </div>     
+</div>
+</body>
+</html>
